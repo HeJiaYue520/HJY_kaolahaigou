@@ -1,4 +1,12 @@
-h1{
-  color: red;
-  background-color: lightcyan;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
