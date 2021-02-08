@@ -5,3 +5,5 @@ banner下方://image2.suning.cn/uimg/cms/img/161251085044083664.png
 音乐播放http://image2.suning.cn/uimg/cms/img/158902437841851312.gif
 向上运动的图标：
 //res.suning.cn/project/cmsWeb/suning/homepage/v8/css/images/index.png?v=2020112301
+登录方式精灵图
+https://kaola-haitao.oss.kaolacdn.com/fe663cdc-4eb9-4b2b-b587-6a97abcd8019.png
