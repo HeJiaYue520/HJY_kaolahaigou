@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>考拉海购</title>
   <link rel="shortcut icon" href="https://img.alicdn.com/tfs/TB13g4aqXP7gK0jSZFjXXc5aXXa-32-32.ico" />
-  <link rel="stylesheet" href="./css/header.css">
 </head>
 <body>
+  <div class="wrap">
+    <!-- 头部公共部分 start -->
+    <div class="header"></div>
+    <!-- 头部公共部分 finish -->
+    <div class="main">
+      <div class="mainWarp">
 
+      </div>
+    </div>
+    <!-- 尾部公共部分 start-->
+    <div class="footer"></div>
+    <!-- 尾部公共部分 finish-->
+  </div>
+  <script src="./script/jquery-1.8.3.js"></script>
+  <!-- JqAjax_start(请求公共头部尾部文件)-->
+  <script>
+    $('.header').load('./views/header.html')
+    $('.footer').load('./views/footer.html')
+
+  </script>
+  <!-- JqAjax_finish(请求公共头部尾部文件)-->
 </body>
 </html>
