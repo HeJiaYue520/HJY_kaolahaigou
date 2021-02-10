@@ -1,13 +1,27 @@
 <!-- 头部公共部分Css样式 -->
 <style type="text/css">
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  /* 广告样式 */
   .headerWarp {
     width: 100%;
     height: 100%;
   }
 
   .advert {
+    cursor: pointer;
     width: 100%;
-    /* height: 100px; */
+    /* border-bottom: 2px solid #DFE2E5; */
     background-color: #FF336E;
   }
 
@@ -18,6 +32,11 @@
     overflow: hidden;
   }
 
+  .advertWrap .imgs {
+    width: 1190px;
+    height: 100px;
+  }
+
   .advertWrap .show {
     display: none;
   }
@@ -25,9 +44,30 @@
   .switchover {
     width: 15px;
     height: 15px;
+    overflow: hidden;
     position: absolute;
     right: 60px;
-    top: 3px;
+    top: 5px;
+  }
+
+  .switchover .swiCloseAdd {
+    position: absolute;
+    cursor: pointer;
+    top: -145px;
+    left: -241px;
+  }
+
+  .switchover .swiCloseAdd:hover{
+    position: absolute;
+    top: -145px;
+    left: -256px;
+  }
+
+  /* 导航栏样式 */
+  .navl_li {
+    width: 100px;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
   }
 </style>
 
@@ -39,12 +79,14 @@
   <!-- advert_start 头部广告栏开始 -->
   <div class="advert">
     <div class="advertWrap">
-      <img src="//image4.suning.cn/uimg/cms/img/161274981358035835.jpg" alt="" class="show">
-      <img src="//image1.suning.cn/uimg/cms/img/161251076805377865.jpg" alt="">
-      <div class="switchover">
-        <div class="swiClose"></div>
-        <div class="swiAdd"></div>
-      </div>
+      <img src="//image4.suning.cn/uimg/cms/img/161274981358035835.jpg" alt="" class="advImgs show">
+      <img src="//image1.suning.cn/uimg/cms/img/161251076805377865.jpg" alt="" class="advImgs">
+    </div>
+    <div class="switchover">
+      <!-- <div class="swiClose"> -->
+        <img src="../images/suningjingling.png" alt="" class="swiCloseAdd">
+      <!-- </div> -->
+      <!-- <div class="swiAdd"></div> -->
     </div>
   </div>
   <!-- advert_finish 头部广告栏结束 --> 
@@ -53,12 +95,89 @@
   <div class="topNav">
     <div class="topNavWrap">
       <div class="topLeft">
-        <span>考拉欢迎你!</span>
-        <a href="">登录</a>
-        <a href="">免费注册</a>
-        <a href="">手机考拉</a>
+        <ul class="navLeft">
+          <div class="navl_li">
+            <img src="../images/site.png" alt="">
+            <a href="#">城市</a>
+            <span class="navCut"></span>
+            <ul class="secondCity">
+              <li class="navlPlace"></li>
+            </ul>
+          </div>
+          <div class="navl_li">
+            <p class="greet">考拉欢迎你！</p>
+            <span class="navCut"></span>
+          </div>
+          <div class="navl_li navlrWrap">
+            <div class="loginBefore">
+              <a href="#" class="navLogin">您好,请登录</a>
+              <a href="#" class="navRegist">免费注册</a>
+              <span class="navCut"></span>
+            </div>
+            <!-- 登录后状态 -->
+            <!-- <div class="loginLater">
+              <a href="#" class="userName">kl001</a>
+              <img src="../images/arrows.png" alt="">
+              <ul>
+                <li></li>
+              </ul>
+            </div>  -->
+          </div>
+        </ul>
       </div>
       <div class="topright">
+        <ul class="navRinght">
+          <div class="navr_li">
+            <a href="#"></a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <a href="#"></a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <a href="#"></a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <img src="" alt="">
+            <a href="#">购物车</a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <a href="#">网站导航</a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <a href="#">手机考拉</a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="navr_li">
+            <a href="#">更多设置</a>
+            <img src="../images/arrows.png" alt="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </ul>
       </div>
     </div>
   </div>
@@ -80,8 +199,35 @@
 <!-- <script src="../script/jquery-1.8.3.js"></script> -->
 <script>
   // 广告
-  // 功能1：实现按钮控制关闭广告
-  
+  // 功能：实现按钮控制关闭广告且下次显示切换广告log
+  let index = 0 // 当前图片的下标，默认为0
+  let lastIndex = 0 // 上一张图片的下标，默认为0
+  $('.swiCloseAdd').on('click',function () {
+    if($('.advertWrap').css("display")=="none"){
+      //隐藏的
+      $('.advertWrap').css('display','block')
+      $('.swiCloseAdd').css('top','-145px')    
+      lastIndex = index
+      index++
+      if (index === $('.advImgs').length) index = 0
+      $('.advImgs')[lastIndex].setAttribute('class','advImgs')
+      $('.advImgs')[index].setAttribute('class','advImgs show')
+    }else{
+      //显示的
+      $('.advertWrap').css('display','none') 
+      $('.swiCloseAdd').css('top','-160px')    
+    }
+  })
+  $(document).ready(function(){ 
+    // alert("页面加载完成！"); 
+    lastIndex = index
+    index++
+    if (index === $('.advImgs').length) index = 0
+    $('.advImgs')[lastIndex].setAttribute('class','advImgs')
+    $('.advImgs')[index].setAttribute('class','advImgs show')
+  })
+
+  // 导航栏
 
 
 </script>
