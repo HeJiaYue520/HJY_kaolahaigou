@@ -5,28 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>考拉海购</title>
   <link rel="shortcut icon" href="https://img.alicdn.com/tfs/TB13g4aqXP7gK0jSZFjXXc5aXXa-32-32.ico" />
+  <link rel="stylesheet" href="./style/font.css">
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
+  <!-- 最外层 start -->
   <div class="wrap">
+
     <!-- 头部公共部分 start -->
     <div class="header"></div>
     <!-- 头部公共部分 finish -->
+
+
+    <!-- banner公共部分 start -->
+    <div class="banner"></div>
+    <!-- banner公共部分 finish -->
+
+
+    <!-- 中间主要内容 start -->
     <div class="main">
       <div class="mainWarp">
 
       </div>
     </div>
+    <!-- 中间主要内容 finish -->
+
+
     <!-- 尾部公共部分 start-->
     <div class="footer"></div>
     <!-- 尾部公共部分 finish-->
+
   </div>
+  <!-- 最外层 finish -->
   <script src="./script/jquery-1.8.3.js"></script>
   <!-- JqAjax_start(请求公共头部尾部文件)-->
   <script>
     $('.header').load('./views/header.html')
-    $('.header').load('./views/banner.html')
+    $('.banner').load('./views/banner.html')
     $('.footer').load('./views/footer.html')
-
   </script>
   <!-- JqAjax_finish(请求公共头部尾部文件)-->
 </body>

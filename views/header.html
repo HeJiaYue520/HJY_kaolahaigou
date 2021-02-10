@@ -1,9 +1,33 @@
 <!-- 头部公共部分Css样式 -->
 <style type="text/css">
-  .headerWarp{
-    width: 1200px;
-    height: 50px;
-    background-color: pink;
+  .headerWarp {
+    width: 100%;
+    height: 100%;
+  }
+
+  .advert {
+    width: 100%;
+    /* height: 100px; */
+    background-color: #FF336E;
+  }
+
+  .advertWrap {
+    width: 1190px;
+    height: 100px;
+    margin: 0px auto;
+    overflow: hidden;
+  }
+
+  .advertWrap .show {
+    display: none;
+  }
+
+  .switchover {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 60px;
+    top: 3px;
   }
 </style>
 
@@ -15,8 +39,12 @@
   <!-- advert_start 头部广告栏开始 -->
   <div class="advert">
     <div class="advertWrap">
-      <p class="blue">何嘉悦</p>
-      <div class="btn">按钮</div>
+      <img src="//image4.suning.cn/uimg/cms/img/161274981358035835.jpg" alt="" class="show">
+      <img src="//image1.suning.cn/uimg/cms/img/161251076805377865.jpg" alt="">
+      <div class="switchover">
+        <div class="swiClose"></div>
+        <div class="swiAdd"></div>
+      </div>
     </div>
   </div>
   <!-- advert_finish 头部广告栏结束 --> 
@@ -51,11 +79,9 @@
 <!-- 头部公共部分Js功能 -->
 <!-- <script src="../script/jquery-1.8.3.js"></script> -->
 <script>
-  console.log(1);
-  $('.btn').click(function (e) { 
-    $('.blue').css('color','blue')
-    
-  });
+  // 广告
+  // 功能1：实现按钮控制关闭广告
+  
 
 
 </script>

@@ -1,5 +1,8 @@
 苏宁配色好看的背景图：
-广告栏://image1.suning.cn/uimg/cms/img/161251076805377865.jpg
+广告栏:
+//image1.suning.cn/uimg/cms/img/161251076805377865.jpg
+//image4.suning.cn/uimg/cms/img/161274981358035835.jpg
+
 banner下方://image2.suning.cn/uimg/cms/img/161251085044083664.png
 页面下方://image2.suning.cn/uimg/cms/img/161251082981298842.png 
 音乐播放http://image2.suning.cn/uimg/cms/img/158902437841851312.gif
