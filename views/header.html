@@ -12,6 +12,7 @@
   a {
     text-decoration: none;
   }
+
   /* 广告样式 */
   .headerWarp {
     width: 100%;
@@ -57,7 +58,7 @@
     left: -241px;
   }
 
-  .switchover .swiCloseAdd:hover{
+  .switchover .swiCloseAdd:hover {
     position: absolute;
     top: -145px;
     left: -256px;
@@ -66,8 +67,363 @@
   /* 导航栏样式 */
   .topNav {
     width: 100%;
+    height: 38px;
+    background-color: #090723;
+    border-bottom: 1px solid #FF336E;
+  }
+
+  .topNavWrap {
+    width: 1190px;
+    height: 38px;
+    margin: 0px auto;
+  }
+
+  /* 导航栏左边 */
+  .navLeft {
+    height: 40px;
+    float: left;
+  }
+
+  .navl_li {
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+    float: left;
+    border: 1px solid transparent;
+  }
+
+  .navl_li a {
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+  }
+
+  .navl_li img {
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px;
+  }
+
+  /* 导航栏下箭头 */
+  .arrows_grey,
+  .shopCarLog,
+  .moreSetting {
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  /* 导航栏分割线 */
+  .navCut {
+    width: 1px;
+    height: 15px;
+    float: left;
+    overflow: hidden;
+    margin: 13px 10px 0px;
+    background-color: grey;
+    border-left: 1px solid #CCCCCC;
+  }
+
+  /* 导航栏左边城市 */
+  .navl_li:nth-of-type(1) {
+    padding: 0px 5px;
+  }
+
+  .cityPlaceShow {
+    font-size: 12px;
+    cursor: pointer;
+    color: rgb(128, 128, 128);
+  }
+
+
+
+  /* 导航栏左边城市二级菜单 */
+  .cityPlace {
+    position: relative;
+  }
+
+  .secondCityPlace {
+    position: absolute;
+    width: 370px;
+    min-height: 200px;
+    overflow-x: hidden;
+    margin-left: -6px;
+    box-shadow: 0px 2px 2px #ff4378;
+    border: 1px solid #FF336E;
+    border-top: none;
+    display: none;
+  }
+
+  /* 设置滚动条样式 */
+  .secondCityPlace::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .secondCityPlace::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .secondCityPlace::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .cityList {
+    width: 100%;
     height: 30px;
-    border-bottom: 1px solid ;
+    margin: 7px 0px;
+    position: relative;
+    /* background-color: aquamarine; */
+    border-bottom: 1px solid #FF336E;
+  }
+
+  .cityList .secondCityPlaceClose {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 2;
+    right: 15px;
+    top: 7px;
+  }
+
+  .cityList .cityListShow {
+    height: 29px;
+    line-height: 28px;
+    margin-left: 15px;
+    min-width: 45px;
+    padding: 0px 7px;
+    float: left;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #FF336E;
+    background-color: white;
+  }
+
+  .provinceWrap .provinceName {
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #FF6600;
+    cursor: pointer;
+  }
+
+  .provinceName:hover {
+    color: #FF336E;
+  }
+
+  .municipalityWrap .municipalityName {
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #FF6600;
+    cursor: pointer;
+  }
+
+  .municipalityName:hover {
+    color: #FF336E;
+  }
+
+  /* 默认选中省级 */
+  .cityList .province {
+    height: 30px;
+    border-bottom: none;
+    background-color: rgb(199, 255, 196);
+
+  }
+
+  .cityList .municipality {
+    height: 30px;
+    border-bottom: none;
+    background-color: bisque;
+  }
+
+  /* 省级展示区 */
+  .provinceShow {
+    width: 355px;
+    min-height: 163px;
+    padding: 0px 7px;
+    margin: 1px 0px 0px -22px;
+    position: absolute;
+    display: block;
+    background-color: rgb(199, 255, 196);
+  }
+
+  /* 文字溢出隐藏 */
+  .provinceItemShow {
+    width: 61px;
+    height: 25px;
+    padding: 0px 5px;
+    margin: 7px 0px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .proItemShow {
+    height: 25px;
+    max-width: 50px;
+    line-height: 25px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer;
+    color: #090723;
+  }
+
+  .proItemShow:hover {
+    color: #FF336E;
+    background-color: #E9E9E9;
+  }
+
+  .provinceShow .provinceItemShow .proItemShowFlog {
+    height: 25px;
+    max-width: 50px;
+    line-height: 25px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: #FF336E;
+  }
+
+
+  /* 市级展示区 */
+  .municipalityShow {
+    width: 355px;
+    min-height: 163px;
+    padding: 0px 7px;
+    margin: 1px 0px 0px -100px;
+    position: absolute;
+    display: none;
+    background-color: bisque;
+  }
+
+  /* 文字溢出隐藏 */
+  .municipalityItemShow {
+    width: 61px;
+    height: 25px;
+    padding: 0px 5px;
+    margin-top: 7px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .munItemShow {
+    height: 25px;
+    max-width: 50px;
+    line-height: 25px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer;
+    color: #090723;
+  }
+
+  .munItemShow:hover {
+    color: #FF336E;
+    background-color: #E9E9E9;
+  }
+
+  .municipalityShow .municipalityItemShow .munItemShowFlog {
+    height: 25px;
+    max-width: 50px;
+    line-height: 25px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: #FF336E;
+  }
+
+
+  /* 导航栏左边问候语 */
+  .navl_li:nth-of-type(2) {
+    font-size: 15px;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    background-color: transparent;
+    width: 80px;
+  }
+
+
+  /* 导航栏左边登录注册 */
+  .navl_li:nth-of-type(3) {
+    background-color: transparent;
+  }
+
+  .navl_li:nth-of-type(3):hover a {
+    color: rgb(153, 153, 153);
+  }
+
+  .navl_li:nth-of-type(3) a:hover {
+    color: #ffffff;
+  }
+
+  .loginBefore .navRegist {
+    margin-left: 15px;
+    color: #FF6600 !important;
+  }
+
+  /* 导航栏右边 */
+  .navRinght {
+    height: 40px;
+    float: right;
+  }
+
+  .navr_li {
+    height: 39px;
+    line-height: 36px;
+    padding: 0px 5px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    /* background-color: coral; */
+    border: 1px solid transparent;
+  }
+
+  .navr_li:hover {
+    background-color: white;
+    border: 1px solid #FF336E;
+  }
+
+  .navr_li:hover a {
+    color: #090723;
+  }
+
+  .navr_li:hover .arrows_grey {
+    transform: rotate(180deg);
+  }
+
+  .navr_li a {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .navr_li a:hover {
+    color: rgb(151, 0, 165);
   }
 </style>
 
@@ -84,12 +440,12 @@
     </div>
     <div class="switchover">
       <!-- <div class="swiClose"> -->
-        <img src="../images/suningjingling.png" alt="" class="swiCloseAdd">
+      <img src="../images/suningjingling.png" alt="" class="swiCloseAdd">
       <!-- </div> -->
       <!-- <div class="swiAdd"></div> -->
     </div>
   </div>
-  <!-- advert_finish 头部广告栏结束 --> 
+  <!-- advert_finish 头部广告栏结束 -->
 
   <!-- navigation_start 头部导航栏开始 -->
   <div class="topNav">
@@ -97,30 +453,58 @@
       <div class="topLeft">
         <ul class="navLeft">
           <!-- 导航栏左边城市 -->
-          <div class="navl_li">
-            <img src="../images/site.png" alt="">
-            <a href="#">城市</a>
-            <span class="navCut"></span>
-            <ul class="secondCity">
-              <li class="navlPlace"></li>
-            </ul>
+          <div class="navl_li cityPlace">
+            <img src="../images/site.png" alt="" class="site">
+            <span class="cityPlaceShow">深圳</span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey cityArrows">
+            <!-- 城市二级菜单 -->
+            <div class="secondCityPlace">
+              <div class="secondCityPlaceWrap">
+                <ul class="cityList">
+                  <img src="../images/swiClose.png" alt="" class="secondCityPlaceClose">
+                  <li class="cityListShow provinceNameShow province">
+                    <span class="provinceWrap">
+                      <span class="provinceName">广东</span>
+                    </span>
+                    <!-- 省级展示区 -->
+                    <ul class="provinceShow">
+                      <!-- <li class="provinceItemShow">
+                        <span class="proItemShow">深圳</span>
+                      </li> -->
+                    </ul>
+                  </li>
+                  <li class="cityListShow  municipalityNameShow">
+                    <span class="municipalityWrap">
+                      <span class="municipalityName">深圳</span>
+                    </span>
+                    <!-- 市级展示区 -->
+                    <ul class="municipalityShow">
+                      <!-- <li class="municipalityItemShow">
+                        <span class="munItemShow">深圳</span>
+                      </li> -->
+                    </ul>
+                  </li>
+                </ul>
+                <!-- <li class="navlPlace"></li> -->
+              </div>
+            </div>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏左边问候语 -->
           <div class="navl_li">
-            <p class="greet">考拉欢迎你！</p>
-            <span class="navCut"></span>
+            <p class="greet">考拉欢迎您!</p>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏左边登录注册 -->
           <div class="navl_li navlrWrap">
             <div class="loginBefore">
               <a href="#" class="navLogin">您好,请登录</a>
               <a href="#" class="navRegist">免费注册</a>
-              <span class="navCut"></span>
             </div>
             <!-- 登录后，登录注册框的状态 -->
             <!-- <div class="loginLater">
               <a href="#" class="userName">kl001</a>
-              <img src="../images/arrows_grey.png" alt="">
+              <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
               <ul>
                 <li></li>
               </ul>
@@ -133,67 +517,68 @@
           <!-- 导航栏右边客户服务 -->
           <div class="navr_li">
             <a href="#">客服服务</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边个人中心 -->
           <div class="navr_li">
             <a href="#">个人中心</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边考拉会员 -->
           <div class="navr_li">
             <a href="#">考拉会员</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边购物车 -->
           <div class="navr_li">
-            <img src="../images/shopCar_grey.png" alt="">
+            <img src="../images/shopCar_grey.png" alt="" class="shopCarLog">
             <a href="#">购物车</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边网站导航 -->
           <div class="navr_li">
             <a href="#">网站导航</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边手机考拉 -->
           <div class="navr_li">
             <a href="#">手机考拉</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <span class="navCut"></span>
           <!-- 导航栏右边更多设置 -->
           <div class="navr_li">
-            <a href="#">更多设置</a>
-            <img src="../images/arrows_grey.png" alt="">
-            <span class="navCut"></span>
+            <img src="../images/moreSettingLog.png" alt="" class="moreSetting">
+            <a href="#" class="moreSetting">更多设置</a>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
             <ul>
               <li></li>
             </ul>
           </div>
+          <!-- <span class="navCut"></span> -->
         </ul>
       </div>
     </div>
@@ -219,37 +604,205 @@
   // 功能：实现按钮控制关闭广告且下次显示切换广告log
   let index = 0 // 当前图片的下标，默认为0
   let lastIndex = 0 // 上一张图片的下标，默认为0
-  $('.swiCloseAdd').on('click',function () {
-    if($('.advertWrap').css("display")=="none"){
+  $('.swiCloseAdd').on('click', function () {
+    if ($('.advertWrap').css("display") == "none") {
       //隐藏的
-      $('.advertWrap').css('display','block')
-      $('.swiCloseAdd').css('top','-145px')    
+      $('.advertWrap').css('display', 'block')
+      $('.swiCloseAdd').css('top', '-145px')
       lastIndex = index
       index++
       if (index === $('.advImgs').length) index = 0
-      $('.advImgs')[lastIndex].setAttribute('class','advImgs')
-      $('.advImgs')[index].setAttribute('class','advImgs show')
-    }else{
+      $('.advImgs')[lastIndex].setAttribute('class', 'advImgs')
+      $('.advImgs')[index].setAttribute('class', 'advImgs show')
+    } else {
       //显示的
-      $('.advertWrap').css('display','none') 
-      $('.swiCloseAdd').css('top','-160px')    
+      $('.advertWrap').css('display', 'none')
+      $('.swiCloseAdd').css('top', '-160px')
     }
   })
-  $(document).ready(function(){ 
+  $(document).ready(function () {
     // alert("页面加载完成！"); 
     lastIndex = index
     index++
     if (index === $('.advImgs').length) index = 0
-    $('.advImgs')[lastIndex].setAttribute('class','advImgs')
-    $('.advImgs')[index].setAttribute('class','advImgs show')
+    $('.advImgs')[lastIndex].setAttribute('class', 'advImgs')
+    $('.advImgs')[index].setAttribute('class', 'advImgs show')
   })
 
   // 导航栏
+  // 导航栏城市区
+  // 功能：
+  // 城市数据处理
+  $.ajax({
+    type: "get",
+    url: "../json/city.json",
+    data: "data",
+    dataType: "json",
+    success: function (response) {
+      // 渲染省级数据
+      var provincialcityDR = ''
+      $.each(response, function (index, value) {
+        provincialcityDR += `
+        <li class="provinceItemShow">
+          <span class="proItemShow">${response[index].text}</span>
+        </li>`
+      })
+      $('.provinceShow').html(provincialcityDR)
+      // 默认渲染广东数据
+      var GuangdongSecondary = ''
+      let guangdongdefault = response[18].children
+      $.each(guangdongdefault, function (index, value) {
+        GuangdongSecondary += `
+        <li class="municipalityItemShow">
+          <span class="munItemShow">${value.text}</span>
+        </li>`
+      })
+      $('.municipalityShow').html(GuangdongSecondary)
+    }
+  })
 
+  //点击城市盒子，显示二级菜单,箭头旋转180度,城市名变成粉红色,背景变成白色,切换图片路经
+  $('.cityPlaceShow').on('click', function () {
+    //给一级数据绑定点击跳转至二级数据页面事件
+    $('.proItemShow').on('click', function () {
+      // 给一级数据绑定点击选中事件
+      $('.provinceItemShow span').removeClass()
+      $('.provinceItemShow span').addClass('proItemShow')
+      $(this).removeClass()
+      $(this).addClass('proItemShowFlog')
+      $('.provinceName').empty()
+      $('.municipalityName').empty()
+      var strHint = '请选择城市(区域)'
+      var str = $(this).text()
+      $('.provinceName').html(str)
+      $('.municipalityName').html(strHint)
 
+      // 点击渲染二级菜单数据
+      // 记录点击的城市名
+      var StrCityName = $('.proItemShowFlog').text()
+      $.ajax({
+        type: "get",
+        url: "../json/city.json",
+        data: "data",
+        dataType: "json",
+        success: function (response) {
+          // 获取一级数据的值
+          $.each(response, function (index, value) {
+            // console.log(response[index].text)
+            if (StrCityName === response[index].text) {
+              var PCityDRSecond = ''
+              $.each(value.children, function (index, value) {
+                PCityDRSecond += `
+              <li class="municipalityItemShow">
+              <span class="munItemShow">${value.text}</span>
+              </li>`
+              })
+              $('.municipalityShow').html(PCityDRSecond)
+            }
+          })
+          $('.munItemShow').on('click', function () {
+            // 给二级数据绑定点击选中事件
+            $('.municipalityItemShow span').removeClass()
+            $('.municipalityItemShow span').addClass('munItemShow')
+            $(this).removeClass()
+            $(this).addClass('munItemShowFlog')
+            $('.municipalityName').empty()
+            $('.cityPlaceShow').empty()
+            var str = $(this).text()
+            $('.municipalityName').html(str)
+            $('.cityPlaceShow').html(str)
+            cityPlaceShowClose()
+          })
+        }
+      })
+
+      // 完成切换选项卡
+      municipalityNameShowChange()
+      // 阻止事件冒泡
+      return false
+    })
+
+    $('.munItemShow').on('click', function () {
+      // 给二级数据绑定点击选中事件
+      $('.municipalityItemShow span').removeClass()
+      $('.municipalityItemShow span').addClass('munItemShow')
+      $(this).removeClass()
+      $(this).addClass('munItemShowFlog')
+      $('.municipalityName').empty()
+      $('.cityPlaceShow').empty()
+      var str = $(this).text()
+      $('.municipalityName').html(str)
+      $('.cityPlaceShow').html(str)
+      cityPlaceShowClose()
+    })
+
+    // 设置默认选项为深圳,广东
+    if ($('.provinceName').text() === '广东') {
+      $('.provinceShow').children().children().removeClass()
+      $('.provinceShow').children().children().addClass('proItemShow')
+      $($('.proItemShow')[18]).addClass('proItemShowFlog')
+    }
+    if ($('.municipalityName').text() === '深圳') {
+      $('.municipalityShow').children().children().removeClass()
+      $('.municipalityShow').children().children().addClass('munItemShow')
+      // $($('.munItemShow')[2]).removeClass('munItemShow')
+      $($('.munItemShow')[2]).addClass('munItemShowFlog')
+    }
+    cityPlaceShowOpen()
+  })
+
+  //点击关闭按钮,二级菜单不显示,并且箭头旋转回0度,城市名变成白色,背景变成彰青色,切换图片路经
+  $('.secondCityPlaceClose').on('click', function () {
+    cityPlaceShowClose()
+  })
+
+  //省级选项卡切换
+  $('.provinceNameShow').on('click', function () {
+    provinceNameShowChange()
+  })
+  $('.municipalityNameShow').on('click', function () {
+    municipalityNameShowChange()
+  })
+
+  // 选项切换
+  function provinceNameShowChange() {
+    $('.provinceNameShow').removeClass('province')
+    $('.provinceNameShow').addClass('province')
+    $('.municipalityNameShow').removeClass('municipality')
+    $('.municipalityShow').css('display', 'none')
+    $('.provinceShow').css('display', 'block')
+  }
+
+  function municipalityNameShowChange() {
+    $('.municipalityNameShow').removeClass('municipality')
+    $('.municipalityNameShow').addClass('municipality')
+    $('.provinceNameShow').removeClass('province')
+    $('.provinceShow').css('display', 'none')
+    $('.municipalityShow').css('display', 'block')
+  }
+  // 城市打开样式方法
+  function cityPlaceShowOpen() {
+    $('.cityPlace').css('border', '0.994318px solid rgb(255, 51, 110)')
+    $('.cityPlace').css('border-bottom', '0px none rgba(0, 0, 0)')
+    $('.cityPlace').css('height', '38px')
+    $('.cityPlace').css('background-color', 'white')
+    $('.site').prop('src', '../images/site_red.png')
+    $('.cityArrows').prop('src', '../images/arrows_red.png')
+    $('.secondCityPlace').css('display', 'block')
+    var deg = 180
+    $('.cityArrows').css('transform', 'rotate(' + deg + 'deg)')
+    $('.cityPlaceShow').css('color', '#ff4378')
+  }
+  // 城市关闭样式方法
+  function cityPlaceShowClose() {
+    $('.cityPlace').css('border', '1px solid rgba(0, 0, 0, 0)')
+    $('.cityPlace').css('height', '36px')
+    $('.cityPlace').css('background-color', '#090723')
+    $('.site').prop('src', '../images/site.png')
+    $('.cityArrows').prop('src', '../images/arrows_grey.png')
+    $('.secondCityPlace').css('display', 'none')
+    var deg = 0
+    $('.cityArrows').css('transform', 'rotate(' + deg + 'deg)')
+    $('.cityPlaceShow').css('color', 'rgb(128,128,128)')
+  }
 </script>
-
-
-
-
-
