@@ -3,9 +3,9 @@
   * {
     margin: 0px;
     padding: 0px;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   ul {
@@ -20,28 +20,323 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .footerContWrap {
     width: 100%;
-    min-height: 500px;
+    min-height: 700px;
     margin: 0px auto;
     overflow: hidden;
-    background-color: #333333;
+    border-top: 2px solid #FF336E;
+    background-color: #090723;
   }
-
+  
   .lorgeIcon {
     width: 100%;
     overflow: hidden;
-    border-bottom: 1px solid aqua;
-    /* background-color: aqua; */
+    background-color: #a5a5a5;
   }
 
- .lorgeIconWrap {
-   width: 1190px;
-   min-height: 300px;
-   margin: 30px auto;
-   background-color: blueviolet;
- }
+  .lorgeIconWrap {
+    width: 1190px;
+    min-height: 100px;
+    margin: 10px auto;
+  }
+  
+  .safeguard {
+    display: flex;
+  }
+
+  /* 大图标列表1公共样式 start */
+  .safeguardList {
+    width: 218px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px dotted #F23D74;
+    background-color: #CCCCFF;
+  }
+
+  .shapeImgs {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 5px 0px 5px 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: #333333;
+  }
+
+  .shapeImg {
+    width: 550px;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .largeCharacter {
+    min-width: 80px;
+    margin: 13px 0px 10px 15px;
+    float: left;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .largeCharacter:hover {
+    cursor: pointer;
+    color: #FF0033;
+  }
+
+  .littleCharacter {
+    max-width: 120px;
+    margin: 2px 0px 0px 15px;
+    float: left;
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+  /* 大图标列表1公共样式 finish */
+  
+  /* 精灵图位置设置 */
+  .shapeImg1 {
+    top: 5px;
+    left: 6px;
+  }
+
+  .safeguardList:hover .shapeImg1 {
+    top: -60px;
+    left: 6px;
+  }
+
+  .shapeImg2 {
+    width: 510px;
+    top: 8px;
+    left: -54px;
+  }
+
+  .safeguardList:hover .shapeImg2 {
+    top: -55px;
+    left: -54px;
+  }
+
+  .shapeImg3 {
+    width: 620px;
+    top: -3px;
+    left: -148px;
+  }
+
+  .safeguardList:hover .shapeImg3 {
+    top: -76px;
+    left: -148px;
+  }
+
+  .shapeImg4 {
+    width: 600px;
+    top: 0px;
+    left: -204px;
+  }
+
+  .safeguardList:hover .shapeImg4 {
+    top: -70px;
+    left: -204px;
+  }
+
+  .shapeImg5 {
+    width: 600px;
+    top: 5px;
+    left: -270px;
+  }
+
+  .safeguardList:hover .shapeImg5 {
+    top: -68px;
+    left: -270px;
+  }
+
+  /* 大图标客户端样式 start */
+  .kaolaClient {
+    width: 1190px;
+    min-height: 220px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-top: 2px dashed #FF336E;
+    background-color: #CC99CC;
+  }
+
+  .kaolaClientList {
+    width: 100px;
+    min-height: 120px;
+    border-radius: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    border: 5px double #FF336E;
+    background-color: #333333;
+  }
+
+  .kaolaClientList:hover {
+    transform: scale(1.2,1.2);
+  }
+  
+  .pc {
+    float: left;
+    margin-left: 120px;
+  }
+  
+  .mobile {
+    float: right;
+    margin-right: 120px;
+  }
+
+  .clientImgs {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 15px 15px 5px 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #333333;
+  }
+
+  .clientText {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .kaolaCenter {
+    width: 120px;
+    height: 180px;
+    float: left;
+    margin: 15px 0px 0px 73px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(252, 56, 154);
+    border: 3px dashed #FF336E;
+    background-color: black;
+  }
+
+  .kalaDownloadText {
+    text-align: center;
+    font-weight: bolder;
+    color: coral;
+  }
+
+  .kaolaCenterLog {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0px 0px 10px;
+    border-radius: 50%;
+    position: relative;
+    background-color: black;
+  }
+
+  .clientDownloadText {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    color: ghostwhite;
+  }
+
+  .clientImg {
+    width: 660px;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .clientImg1 {
+    top: -157px;
+    left: -0.5px;
+  }
+
+  .kaolaClientList:hover .clientImg1 {
+    top: -157px;
+    left: -81.5px;
+  }
+
+  .kaolaClientList:hover .clientText1 {
+    color: #53CEF9;
+  }
+
+  .clientImg2 {
+    top: -227px;
+    left: -0.5px;
+  }
+
+  .kaolaClientList:hover .clientImg2 {
+    top: -227px;
+    left: -81.5px;
+  }
+
+  .kaolaClientList:hover .clientText2 {
+    color: #FBCBB5;
+  }
+
+  .clientImg31 {
+    width: 95px;
+    top: 1px;
+    left: 3px;
+    display: block;
+  }
+
+  .clientImg32 {
+    width: 95px;
+    top: 5px;
+    left: 3px;
+    display: none;
+    transition: all 1s ease-in-out;
+  }
+
+  .kaolaCenter:hover .clientImg32 {
+    display: block;
+  }
+  
+  .kaolaCenter:hover .clientImg31 {
+    display: none;
+  }
+
+  .kaolaCenterLog:hover .clientImg32 {
+    width: 95px;
+    top: 5px;
+    left: 3px;
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
+
+  .clientImg4 {
+    width: 620px;
+    top: -366px;
+    left: 1px;
+  }
+
+  .kaolaClientList:hover .clientImg4 {
+    top: -366px;
+    left: -75px;
+  }
+
+  .kaolaClientList:hover .clientText4 {
+    color: #F9F28B;
+  }
+
+  .clientImg5 {
+    width: 620px;
+    top: -284px;
+    left: 2px;
+  }
+
+  .kaolaClientList:hover .clientImg5 {
+    top: -284px;
+    left: -76px;
+  }
+
+  .kaolaClientList:hover .clientText5 {
+    color: #61FA9E;
+  }
+
+
+
+
+  /* 大图标客户端样式 finish */
 
 </style>
 
@@ -53,7 +348,82 @@
     <!-- 大图标区 start -->
     <div class="lorgeIcon">
       <div class="lorgeIconWrap">
+        <!-- 大图标区承诺保障 start -->
+        <ul class="safeguard">
+          <li class="safeguardList">
+            <div class="shapeImgs shapeImgs1">
+              <img src="../images/kaolabottomLog.png" alt="" class="shapeImg shapeImg1">
+            </div>
+            <p class="largeCharacter">正品保障</p>
+            <span class="littleCharacter">正品保障、提供发票</span>
+          </li>
+          <li class="safeguardList">
+            <div class="shapeImgs shapeImgs2">
+              <img src="../images/kaolabottomLog.png" alt="" class="shapeImg shapeImg2">
+            </div>
+            <p class="largeCharacter">急速物流</p>
+            <span class="littleCharacter">如约送货、送货入户</span>
+          </li>
+          <li class="safeguardList">
+            <div class="shapeImgs shapeImgs3">
+              <img src="../images/kaolabottomLog.png" alt="" class="shapeImg shapeImg3">
+            </div>
+            <p class="largeCharacter">售后无忧</p>
+            <span class="littleCharacter">30天包退、365天包换</span>
+          </li>
+          <li class="safeguardList">
+            <div class="shapeImgs shapeImgs4">
+              <img src="../images/kaolabottomLog.png" alt="" class="shapeImg shapeImg4">
+            </div>
+            <p class="largeCharacter">帮助中心</p>
+            <span class="littleCharacter">您的购物指南</span>
+          </li>
+          <li class="safeguardList">
+            <div class="shapeImgs shapeImgs5">
+              <img src="../images/kaolabottomLog.png" alt="" class="shapeImg shapeImg5">
+            </div>
+            <p class="largeCharacter">省心购</p>
+            <span class="littleCharacter">专注好服务</span>
+          </li>
+        </ul>
+        <!-- 大图标区承诺保障 finish -->
 
+        <!-- 大图标区考拉客户端 start -->
+        <ul class="kaolaClient">
+          <li class="kaolaClientList pc">
+            <div class="clientImgs">
+              <img src="../images/kaolabottomLog.png" alt="" class="clientImg clientImg1">
+            </div>
+            <span class="clientText clientText1">PC版</span>
+          </li>
+          <li class="kaolaClientList pc">
+            <div class="clientImgs">
+              <img src="../images/kaolabottomLog.png" alt="" class="clientImg clientImg2">
+            </div>
+            <span class="clientText clientText2">Mac版</span>
+          </li>
+          <div class="kaolaCenter">
+            <p class="kalaDownloadText">欢迎下载</p>
+            <div class="kaolaCenterLog">
+              <img src="../images/xiankaola128.png" alt="" class="clientImg clientImg3 clientImg31">
+              <img src="../images/mainkaola128.png" alt="" class="clientImg clientImg3 clientImg32">
+            </div>
+            <p class="clientDownloadText">考拉客户端</p>
+          </div>
+          <li class="kaolaClientList mobile">
+            <div class="clientImgs">
+              <img src="../images/kaolabottomLog.png" alt="" class="clientImg clientImg4">
+            </div>
+            <span class="clientText clientText4">iPhone版</span>
+          </li>
+          <li class="kaolaClientList mobile">
+            <div class="clientImgs">
+              <img src="../images/kaolabottomLog.png" alt="" class="clientImg clientImg5">
+            </div>
+            <span class="clientText clientText5">Android版</span>
+          </li>
+        </ul> 
+        <!-- 大图标区考拉客户端 finish -->
       </div>
     </div>
     <!-- 大图标区 finish -->
