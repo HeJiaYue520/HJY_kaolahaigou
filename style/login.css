@@ -1,5 +1,7 @@
 /* 初始化footer部分，把footer引入的部分样式隐藏，为了美观 */
-.arrange, .lorgeIconWrap, .littleIcon{
+.arrange,
+.lorgeIconWrap,
+.littleIcon {
   display: none;
 }
 
@@ -13,7 +15,7 @@
 }
 
 .loginMainWarp {
-  width: 100%; 
+  width: 100%;
   background-color: #ccc;
   overflow: hidden;
 }
@@ -30,12 +32,12 @@
   margin: 0px auto 7px;
 }
 
-.loginTopLogleft{
+.loginTopLogleft {
   height: 80px;
   float: left;
 }
 
-.loginTopLogRight{
+.loginTopLogRight {
   width: 400px;
   height: 80px;
   float: right;
@@ -47,6 +49,56 @@
   margin: 7px auto 7px;
   overflow: hidden;
   position: relative;
+}
+
+.gohomea {
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  left: 20px;
+  color: white;
+  box-shadow: 2px 2px 5px orangered;
+  background-color: rgba(255, 161, 127, 0.665);
+}
+
+.gohomea:hover {
+  color: #FFFFE0;
+  box-shadow: 2px 2px 5px rgb(255, 121, 72);
+  background-color: rgba(255, 131, 86, 0.665);
+}
+
+.checkBGSpan {
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  right: 20px;
+  color: white;
+  box-shadow: 2px 2px 5px orangered;
+  background-color: rgba(255, 161, 127, 0.665);
+}
+
+.checkBGSpan:hover {
+  color: #FFFFE0;
+  box-shadow: 2px 2px 5px rgb(255, 121, 72);
+  background-color: rgba(255, 131, 86, 0.665);
 }
 
 .loginBImg {
@@ -71,10 +123,8 @@
 
 .loginMainFun {
   width: 400px;
-  height: 350px;
-  border-radius: 50px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   position: absolute;
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.508);
@@ -82,10 +132,8 @@
 
 .loginFun {
   position: relative;
-  left: 50%;
-  top: 42%;
-  margin-top: -175px;
-  margin-left: 130px;
+  left: 700px;
+  top: 140px;
 }
 
 .LoginTopScanWrap {
@@ -97,6 +145,7 @@
   width: 64px;
   height: 64px;
   position: absolute;
+  z-index: 4;
   top: 0px;
   right: 0px;
   overflow: hidden;
@@ -114,9 +163,237 @@
   top: 7px;
   right: 64px;
   overflow: hidden;
-
 }
 
 .LoginTopHintWrap img {
   width: 120px;
+  height: 25px;
+}
+
+.LoginCentSubmitWrap {
+  width: 350px;
+  min-height: 240px;
+  margin: -45px auto 0px;
+  padding: 0px 0px 20px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  border-bottom: 2px dashed black;
+}
+
+
+.passwordToLoginWrap, .NoteToLoginWrap{
+  height: 35px;
+  float: left;
+  text-align: center;
+  line-height: 35px;
+  margin: 7px 10px 10px 7px;
+}
+
+.passwordToLoginText {
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.passwordToLoginText1 {
+  border-bottom: 2px solid black;
+}
+
+/* 登录栏选项卡样式 */
+.passwordToLoginShow{
+  width: 335px;
+  height: 180px;
+  position: absolute;
+  top: 65px;
+  display: none;
+}
+
+.passwordToLoginShow1 {
+  width: 335px;
+  height: 180px;
+  position: absolute;
+  top: 65px;
+  left: 10px;
+  display: none;
+}
+
+
+.p_userWrap{
+  width: 330px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0px auto 10px;
+  position: relative;
+}
+
+.span_userName, .span_phoneNumber, .span_phoneVerificationNumber{
+  font-weight: 600;
+  margin: 0px 7px 0px 0px;
+  float: left;
+}
+
+.span_passWord {
+  font-weight: 600;
+  width: 52px;
+  margin: 0px 7px 0px 0px;
+  float: left;
+}
+
+.p_userWrap .iconyonghumingchengICO {
+  color: #999999;
+  font-size: 30px;
+  position: absolute;
+  left: 73px;
+}
+
+.p_userWrap .iconmima {
+  color: #999999;
+  font-size: 27px;
+  position: absolute;
+  left: 75px;
+}
+
+.p_userWrap .iconshouji {
+  color: #999999;
+  font-size: 30px;
+  position: absolute;
+  left: 73px;
+}
+
+.p_userWrap .iconduanxinyanzhengma {
+  color: #999999;
+  font-size: 30px;
+  position: absolute;
+  left: 73px;
+}
+
+.userNameInput, .passWordInput{
+  float: left;
+  width: 205px;
+  height: 46px;
+  font-size: 15px;
+  padding-left: 55px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: rgba(250, 250, 210, 0.75);
+}
+
+.userPhoneNumberInput, .passVerificationInput {
+  float: left;
+  width: 205px;
+  height: 46px;
+  font-size: 15px;
+  padding-left: 55px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: rgba(250, 250, 210, 0.75);
+}
+
+.LoginButton {
+  width: 320px;
+  height: 50px;
+  line-height: 50px;
+  margin: 20px auto 0px;
+  border-radius: 35px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 2px 2px 5px red;
+  background-color: rgba(255, 84, 84, 0.768);
+}
+
+.LoginButton:hover {
+  color: lightcyan;
+  box-shadow: 2px 2px 5px rgb(255, 67, 67);
+  background-color: rgba(255, 68, 68, 0.83);
+}
+
+.gainVerification {
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0px 5px;
+  top: 13px;
+  right: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  position: absolute;
+  border-left: 1px solid gray;
+}
+
+.gainVerification:hover {
+  color: red;
+}
+
+.gainVerificationShow {
+  width: 100px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  top: 2px;
+  right: 8px;
+  position: absolute;
+  border-radius: 35px;
+}
+
+.markedWord {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.markedWordText1 {
+  font-weight: 600;
+  margin: 10px auto 0px;
+}
+
+.markedWordText2 {
+  font-size: 12px;
+  color: orangered;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 224, 0.727);
+}
+
+.markedWordText4 {
+  width: 200px;
+  margin: 107px 0px 0px 107px;
+}
+
+.markedWordText4 .iconsaoma {
+  font-size: 30px;
+  float: left;
+  color: orangered;
+}
+
+.markedWordText4 .markedWordText5 {
+  width: 120px;
+  height: 20px;
+  line-height: normal;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  float: left;
+  margin-left: 10px;
+}
+
+
+.LoginBottomWayWrap {
+  width: 300px;
+  margin: 10px auto;
+  padding: 0px 0px 10px;
+}
+
+.LoginBottomWayWrap img{
+  display: block;
+  width: 200px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+/* 放最后公共样式中，用于JS操作 */
+.showBox {
+  display: block;
 }
