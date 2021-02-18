@@ -86,12 +86,13 @@ $('.p_userWrap input').on({
 
 // 点击登录判断输入值的是否正确
 $('.LoginButton').on('click', function () {
-  console.log($('.userNameInput').val())
-  console.log($('.passWordInput').val())
-  console.log($('.userPhoneNumberInput').val())
-  console.log($('.passVerificationInput').val())
+  // 第一个输入框的值判断（是否是手机号，邮箱，）
+  var userNameInput =  $('.userNameInput').val()
+  
+  
   
 })
+
 
 
 

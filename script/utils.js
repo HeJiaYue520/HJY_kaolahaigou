@@ -284,3 +284,5 @@ function animate(dom,attrObj,callback){
     }
   },20)
 }
+
+

@@ -5,8 +5,8 @@
   display: none;
 }
 
-/* Login样式部分 */
-.loginMain {
+/* Registration样式部分 */
+.RegistrationMain {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -14,36 +14,36 @@
   border-bottom: 2px solid gray;
 }
 
-.loginMainWarp {
+.RegistrationMainWarp {
   width: 100%;
   background-color: #ccc;
   overflow: hidden;
 }
 
-.loginTop {
+.RegistrationTop {
   width: 100%;
   border-bottom: 2px solid grey;
   background-color: white;
 }
 
-.loginTopWrap {
+.RegistrationTopWrap {
   width: 1190px;
   height: 80px;
   margin: 0px auto 7px;
 }
 
-.loginTopLogleft {
+.RegistrationTopLogleft {
   height: 80px;
   float: left;
 }
 
-.loginTopLogRight {
+.RegistrationTopLogRight {
   width: 400px;
   height: 80px;
   float: right;
 }
 
-.loginBG {
+.RegistrationBG {
   width: 1190px;
   height: 670px;
   margin: 7px auto 7px;
@@ -101,18 +101,18 @@
   background-color: rgba(255, 131, 86, 0.665);
 }
 
-.loginBImg {
+.RegistrationBImg {
   width: 100%;
   height: 670px;
   border-radius: 35px;
   position: absolute;
 }
 
-.loginBGShow {
+.RegistrationBGShow {
   z-index: 1;
 }
 
-.loginBGWrap {
+.RegistrationBGWrap {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -163,7 +163,7 @@
 
 .OKBtn {
   display: block;
-  width: 120px;
+  width: 220px;
   height: 30px;
   line-height: 30px;
   margin: 20px auto;
@@ -181,27 +181,27 @@
   background-color: rgb(100, 255, 100);
 }
 
-.loginMainFun {
+.RegistrationMainFun {
   width: 400px;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   position: absolute;
   z-index: 5;
-  background-color: rgba(255, 255, 255, 0.508);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.loginFun {
+.RegistrationFun {
   position: relative;
   left: 700px;
   top: 140px;
 }
 
-.LoginTopScanWrap {
+.RegistrationTopScanWrap {
   width: 400px;
   height: 64px;
 }
 
-.LoginTopScanLogWrap {
+.RegistrationTopScanLogWrap {
   width: 64px;
   height: 64px;
   position: absolute;
@@ -211,12 +211,12 @@
   overflow: hidden;
 }
 
-.LoginTopScanLogWrap img {
+.RegistrationTopScanLogWrap img {
   cursor: pointer;
   width: 64px;
 }
 
-.LoginTopHintWrap {
+.RegistrationTopHintWrap {
   width: 120px;
   height: 25px;
   position: absolute;
@@ -225,27 +225,27 @@
   overflow: hidden;
 }
 
-.LoginTopHintWrap img {
+.RegistrationTopHintWrap img {
   width: 120px;
   height: 25px;
 }
 
-.LoginCentSubmitWrap {
+.RegistrationCentSubmitWrap {
   width: 350px;
-  min-height: 260px;
+  min-height: 350px;
   margin: -45px auto 0px;
-  padding: 0px 0px 20px;
+  padding: 0px 10px 20px;
   overflow: hidden;
   position: relative;
   display: none;
   border-bottom: 2px dashed black;
 }
 
-.LoginCentSubmitWrap2 {
-  min-height: 220px;
+.RegistrationCentSubmitWrap2 {
+  min-height: 230px;
 }
 
-.passwordToLoginWrap, .NoteToLoginWrap{
+.passwordToRegistrationWrap {
   height: 35px;
   float: left;
   text-align: center;
@@ -253,45 +253,42 @@
   margin: 7px 10px 10px 7px;
 }
 
-.passwordToLoginText {
+.passwordToRegistrationText {
   font-size: 18px;
   font-weight: bolder;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-}
-
-.passwordToLoginText1 {
   border-bottom: 2px solid black;
 }
 
+.passwordToRegistrationText2 {
+  display: block;
+  padding: 0px 3px;
+  color: black;
+  border: 2px dashed black;
+}
+
+.passwordToRegistrationText2:hover {
+  color: rgb(255, 0, 0);
+  border: 2px solid black;
+}
+
 /* 登录栏选项卡样式 */
-.passwordToLoginShow{
-  width: 335px;
-  height:200px;
+.passwordToRegistrationShow {
+  width: 340px;
+  height: 180px;
   position: absolute;
   top: 65px;
   display: none;
 }
 
-.passwordToLoginShow1 {
-  width: 335px;
-  height: 200px;
-  position: absolute;
-  top: 65px;
-  left: 10px;
-  display: none;
-}
-
-
-.p_userWrap{
-  width: 330px;
+.p_userWrap {
+  width: 340px;
   height: 50px;
   line-height: 50px;
   margin: 0px auto 10px;
   position: relative;
 }
 
-.span_userName, .span_phoneNumber, .span_phoneVerificationNumber{
+.span_userName {
   font-weight: 600;
   margin: 0px 7px 0px 0px;
   float: left;
@@ -301,6 +298,13 @@
   font-weight: 600;
   width: 52px;
   margin: 0px 7px 0px 0px;
+  float: left;
+}
+
+.span_passWord1 {
+  font-weight: 600;
+  width: 70px;
+  margin: 0px 7px 0px -14px;
   float: left;
 }
 
@@ -318,21 +322,8 @@
   left: 75px;
 }
 
-.p_userWrap .iconshouji {
-  color: #999999;
-  font-size: 30px;
-  position: absolute;
-  left: 73px;
-}
-
-.p_userWrap .iconduanxinyanzhengma {
-  color: #999999;
-  font-size: 30px;
-  position: absolute;
-  left: 73px;
-}
-
-.userNameInput, .passWordInput{
+.userNameInput,
+.passWordInput {
   float: left;
   width: 205px;
   height: 46px;
@@ -344,7 +335,29 @@
   background-color: rgba(250, 250, 210, 0.75);
 }
 
-.userPhoneNumberInput, .passVerificationInput {
+
+.p_userWrap .conceal {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.p_userWrap .iconyanjing-bi {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.p_userWrap .iconyanjing-kai {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.passWordInput1 {
   float: left;
   width: 205px;
   height: 46px;
@@ -356,65 +369,61 @@
   background-color: rgba(250, 250, 210, 0.75);
 }
 
-.LoginButton {
+.passSecurity {
+  width: 300px;
+  height: 30px;
+  margin: 0px auto;
+}
+
+.passSecurity_p {
+  padding: 0px 5px;
+  line-height: 30px;
+  float: left;
+  font-size: 12px;
+  font-weight: 600;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.passSecurity span {
+  float: left;
+  width: 70px;
+  height: 30px;
+  margin: 0px 0px 0px 7px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.passSecurity .strong1 {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.passSecurity .strong2 {
+  background-color: rgba(255, 153, 0, 0.6);
+}
+
+.passSecurity .strong3 {
+  background-color: rgba(0, 255, 21, 0.6);
+}
+
+.RegistrationButton {
   width: 320px;
   height: 50px;
   line-height: 50px;
-  margin: 35px auto 0px;
+  margin: 20px auto 0px;
   border-radius: 35px;
   cursor: pointer;
   color: white;
   box-shadow: 2px 2px 5px red;
-  background-color: rgba(255, 84, 84, 0.768);
+  background-color: rgba(255, 84, 84, 0.7);
 }
 
-.LoginButton:hover {
+.RegistrationButton:hover {
   color: lightcyan;
   box-shadow: 2px 2px 5px rgb(255, 67, 67);
-  background-color: rgba(255, 68, 68, 0.83);
-}
-
-.registration_a {
-  display: block;
-  height: 20px;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: 700;
-  position: absolute;
-  left: 200px;
-  color: black;
-}
-
-.registration_a:hover {
-  color: red;
-}
-
-.gainVerification {
-  width: 60px;
-  height: 25px;
-  line-height: 25px;
-  padding: 0px 5px;
-  top: 13px;
-  right: 10px;
-  font-size: 12px;
-  cursor: pointer;
-  position: absolute;
-  border-left: 1px solid gray;
-}
-
-.gainVerification:hover {
-  color: red;
-}
-
-.gainVerificationShow {
-  width: 100px;
-  height: 46px;
-  text-align: center;
-  line-height: 46px;
-  top: 2px;
-  right: 8px;
-  position: absolute;
-  border-radius: 35px;
+  background-color: rgba(255, 68, 68, 0.8);
 }
 
 .markedWord {
@@ -458,13 +467,13 @@
 }
 
 
-.LoginBottomWayWrap {
+.RegistrationBottomWayWrap {
   width: 300px;
   margin: 10px auto;
   padding: 0px 0px 10px;
 }
 
-.LoginBottomWayWrap img{
+.RegistrationBottomWayWrap img {
   display: block;
   width: 200px;
   margin: 0px auto;
