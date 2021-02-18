@@ -480,6 +480,10 @@
   cursor: pointer;
 }
 
+.markedWordText3 {
+  cursor: pointer;
+}
+
 /* 放最后公共样式中，用于JS操作 */
 .showBox {
   display: block;

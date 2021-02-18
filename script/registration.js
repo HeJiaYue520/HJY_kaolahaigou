@@ -77,36 +77,36 @@ $('.userNameInput').on({
       if (dole.test(RegistrationUserNameInput)) { //如果是邮箱格式就判断格式对错
         if (!mailbox.test(RegistrationUserNameInput)) { //邮箱格式错误做的事
           $(this).css('border', '2px solid red')
-          console.log('输入的邮箱格式有错误，请仔细检查后重新输入')
+          // console.log('输入的邮箱格式有错误，请仔细检查后重新输入')
         } else {
           $(this).css('border', '2px solid #38ffff')
-          console.log('邮箱格式正确，系统将账号定义为邮箱用户账号')
+          // console.log('邮箱格式正确，系统将账号定义为邮箱用户账号')
         }
       } else if (userNamebox.test(RegistrationUserNameInput)) { //如果不是邮箱格式则是用户名格式,那就直接判断用户名格式如果错，做的事
         $(this).css('border', '2px solid #38ffff')
-        console.log('用户名格式正确，系统将账号定义为用户名账号')
+        // console.log('用户名格式正确，系统将账号定义为用户名账号')
       } else {
         $(this).css('border', '2px solid red')
-        console.log('用户名格式错误，请仔细检查后重新输入')
+        // console.log('用户名格式错误，请仔细检查后重新输入')
       }
     } else if (dole.test(RegistrationUserNameInput)) { //是邮箱格式判断格式对错
-      console.log('是邮箱格式')
+      // console.log('是邮箱格式')
       if (!mailbox.test(RegistrationUserNameInput)) { //邮箱格式错误做的事
         $(this).css('border', '2px solid red')
-        console.log('输入的邮箱格式有错误，请仔细检查后重新输入')
+        // console.log('输入的邮箱格式有错误，请仔细检查后重新输入')
       } else {
         $(this).css('border', '2px solid #38ffff')
-        console.log('邮箱格式正确，系统将账号定义为邮箱用户账号')
+        // console.log('邮箱格式正确，系统将账号定义为邮箱用户账号')
       }
     } else if (phoneNumStr.test(RegistrationUserNameInput)) { //匹配手机格式
       $(this).css('border', '2px solid #38ffff')
-      console.log('手机号格式正确，系统将账号定义为手机号用户账号')
+      // console.log('手机号格式正确，系统将账号定义为手机号用户账号')
     } else if (RegistrationUserNameInput === '') {
       $(this).css('border', '2px solid transparent')
-      console.log('输入的值为空啥也不做')
+      // console.log('输入的值为空啥也不做')
     } else {
       $(this).css('border', '2px solid red')
-      console.log('输入的手机号格式错误，请仔细检查后重新输入')
+      // console.log('输入的手机号格式错误，请仔细检查后重新输入')
     }
   }
 })
@@ -153,19 +153,19 @@ $('.passWordInput1').on({
   focus: function () {
     if ($('.passWordInput').val() === $(this).val()) {
       $(this).css('border', '2px solid #38ffff')
-      console.log('密码核对正确');
+      // console.log('密码核对正确');
     } else {
       $(this).css('border', '2px solid red')
-      console.log('密码核对错误');
+      // console.log('密码核对错误');
     }
-    console.log($('.passWordInput').val());
+    // console.log($('.passWordInput').val());
     $(this).keyup(function () {
       if ($('.passWordInput').val() === $(this).val()) {
         $(this).css('border', '2px solid #38ffff')
-        console.log('密码核对正确');
+        // console.log('密码核对正确');
       } else {
         $(this).css('border', '2px solid red')
-        console.log('密码核对错误');
+        // console.log('密码核对错误');
       }
     })
   },
@@ -201,47 +201,122 @@ $('.RegistrationButton').on('click', function () {
   var userNamebox = /^[a-zA-Z][a-zA-Z0-9_]{4,11}$/
   if ($('.userNameInput').val() === '' || $('.passWordInput').val() === '' || $('.passWordInput1').val() === '') {
     // alert('注册失败，输入框内容不能为空，请完成输入框的填写')
-    $('.RegistrationBGWrap').css('display','block')
-    $('.LoginAlertBox4').css('display','block')
+    $('.RegistrationBGWrap').css('display', 'block')
+    $('.LoginAlertBox4').css('display', 'block')
   } else if (!($('.passWordInput').val() === $('.passWordInput1').val())) {
     // alert('注册失败，确认密码和设置密码不相同')
-    $('.RegistrationBGWrap').css('display','block')
-    $('.LoginAlertBox5').css('display','block')
+    $('.RegistrationBGWrap').css('display', 'block')
+    $('.LoginAlertBox5').css('display', 'block')
   } else if (topEnglishFlog.test(RegistrationUserNameInput)) { //如果有就判断是否为邮箱格式
     if (dole.test(RegistrationUserNameInput)) { //如果是邮箱格式就判断格式对错
       if (!mailbox.test(RegistrationUserNameInput)) { //邮箱格式错误做的事
-        $('.RegistrationBGWrap').css('display','block')
-        $('.LoginAlertBox3').css('display','block')
-      } else {
-        $('.RegistrationBGWrap').css('display','block')
-        $('.LoginAlertBox8').css('display','block')
+        $('.RegistrationBGWrap').css('display', 'block')
+        $('.LoginAlertBox3').css('display', 'block')
+      } else { //邮箱格式正确
+        $('.RegistrationBGWrap').css('display', 'block')
+        $('.LoginAlertBox8').css('display', 'block')
+        // 保存用户名
+        var UserNameLocaStr = 'UserName'
+        var LocaLenthStr = localStorage.length
+        var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+        if (localStorage.length === 0) {
+          localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+        } else {
+          for (var i = 0, len = localStorage.length; i < len; i++) {
+            if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
+              localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+            } else {
+              $('.RegistrationBGWrap').css('display', 'block')
+              $('.LoginAlertBox9').css('display', 'block')
+            }
+          }
+        }
       }
     } else if (userNamebox.test(RegistrationUserNameInput)) { //如果不是邮箱格式则是用户名格式,那就直接判断用户名格式如果错，做的事
-      $('.RegistrationBGWrap').css('display','block')
-      $('.LoginAlertBox6').css('display','block')
-    } else {
-      $('.RegistrationBGWrap').css('display','block')
-      $('.LoginAlertBox1').css('display','block')
+      $('.RegistrationBGWrap').css('display', 'block')
+      $('.LoginAlertBox6').css('display', 'block')
+      // 保存用户名
+      var UserNameLocaStr = 'UserName'
+      var LocaLenthStr = localStorage.length
+      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+      if (localStorage.length === 0) {
+        localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+      } else {
+        for (var i = 0, len = localStorage.length; i < len; i++) {
+          if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
+            localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+          } else {
+            $('.RegistrationBGWrap').css('display', 'block')
+            $('.LoginAlertBox9').css('display', 'block')
+          }
+        }
+      }
+    } else { //用户名错误
+      $('.RegistrationBGWrap').css('display', 'block')
+      $('.LoginAlertBox1').css('display', 'block')
     }
   } else if (dole.test(RegistrationUserNameInput)) { //是邮箱格式判断格式对错
     if (!mailbox.test(RegistrationUserNameInput)) { //邮箱格式错误做的事
-      $('.RegistrationBGWrap').css('display','block')
-      $('.LoginAlertBox3').css('display','block')
-    } else {
-      $('.RegistrationBGWrap').css('display','block')
-      $('.LoginAlertBox8').css('display','block')
+      $('.RegistrationBGWrap').css('display', 'block')
+      $('.LoginAlertBox3').css('display', 'block')
+    } else { //邮箱格式正确
+      $('.RegistrationBGWrap').css('display', 'block')
+      $('.LoginAlertBox8').css('display', 'block')
+      // 保存用户名
+      var UserNameLocaStr = 'UserName'
+      var LocaLenthStr = localStorage.length
+      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+      if (localStorage.length === 0) {
+        localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+      } else {
+        for (var i = 0, len = localStorage.length; i < len; i++) {
+          if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
+            localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+          } else {
+            $('.RegistrationBGWrap').css('display', 'block')
+            $('.LoginAlertBox9').css('display', 'block')
+          }
+        }
+      }
     }
   } else if (phoneNumStr.test(RegistrationUserNameInput)) { //匹配手机格式
-    $('.RegistrationBGWrap').css('display','block')
-    $('.LoginAlertBox7').css('display','block')
-  } else {
-    $('.RegistrationBGWrap').css('display','block')
-    $('.LoginAlertBox2').css('display','block')
+    $('.RegistrationBGWrap').css('display', 'block') //手机格式正确
+    $('.LoginAlertBox7').css('display', 'block')
+    // 保存用户名
+    var UserNameLocaStr = 'UserName'
+    var LocaLenthStr = localStorage.length
+    var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+    if (localStorage.length === 0) {
+      localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+    } else {
+      for (var i = 0, len = localStorage.length; i < len; i++) {
+        if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
+          localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+          console.log(localStorage.key(i))
+        } else {
+          $('.RegistrationBGWrap').css('display', 'block')
+          $('.LoginAlertBox9').css('display', 'block')
+        }
+      }
+    }
+  } else { //手机格式错误
+    $('.RegistrationBGWrap').css('display', 'block')
+    $('.LoginAlertBox2').css('display', 'block')
   }
 })
 
 // 点击确认关闭弹窗和遮罩
 $('.OKBtn').on('click', function () {
-  $('.RegistrationBGWrap').css('display','none')
-  $('.LoginAlertBox').css('display','none')
+  $('.RegistrationBGWrap').css('display', 'none')
+  $('.LoginAlertBox').css('display', 'none')
+})
+
+// 点击二维码7次清除浏览器所有local数据(清除用户名数据)
+var localDataFlog = 0
+$('.markedWordText3').on('click', function () {
+  localDataFlog++
+  if (localDataFlog === 3) {
+    localStorage.clear()
+    localDataFlog = 0
+  }
 })
