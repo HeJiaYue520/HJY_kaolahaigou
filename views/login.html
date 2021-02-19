@@ -27,14 +27,49 @@
     <div class="loginMain">
       <div class="loginMainWarp">
         <div class="loginBGWrap"></div>
-        <div class="LoginAlertBox">
-          <p class="LoginAlertText LoginAlertText1">格式错误!</p>
-          <p class="LoginAlertText LoginAlertText2">用户名正确格式:</p>
-          <p class="LoginAlertText LoginAlertText3">1.由字母a～z(不区分大小写),数字0～9,点,减号或下划线组成</p><br>
-          <p class="LoginAlertText LoginAlertText3">2.只能以字母开头，包含字符 数字 下划线。</p><br>
-          <p class="LoginAlertText LoginAlertText3">3.用户名长度为4～18个字符。</p><br>
-          <p class="LoginAlertText LoginAlertText4">(正确格式)例如：beijing.2008</p>
+        <div class=" LoginAlertBox1 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">登录失败！</p>
+          <p class="LoginAlertText LoginAlertText4">该用户名不存在，请先去注册一个再登录吧~</p>
+          <p class="OKBtn">返回</p>
+        </div>
+        <div class=" LoginAlertBox2 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">登录失败！</p>
+          <p class="LoginAlertText LoginAlertText4">密码不对，请确认输入正确的密码，再登录</p>
+          <p class="OKBtn">返回</p>
+        </div>
+        <div class=" LoginAlertBox3 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">用户名核对正确</p>
+          <p class="LoginAlertText LoginAlertText4">密码输入正确！</p>
+          <a href="../index.html" class="OKBtn">恭喜你，登录成功~</a>
+        </div>
+        <div class="LoginAlertBox4 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">获取验证码失败！格式错误!</p>
+          <p class="LoginAlertText LoginAlertText2">手机号正确格式:</p>
+          <p class="LoginAlertText LoginAlertText3">1.中国电信号段：133、149、153、173、177、180、181、189、199</p><br>
+          <p class="LoginAlertText LoginAlertText3">2.中国联通号段：130、131、132、145、155、156、166、175、176、185、186</p><br>
+          <p class="LoginAlertText LoginAlertText3">3.中国移动号段：134(0-8)、135、136、137、138、139、147、150、151、152、157、158、159、178、182、183、184、187、188、198</p><br>
+          <p class="LoginAlertText LoginAlertText4">(正确格式)例如：13237525795</p>
           <p class="OKBtn">确认</p>
+        </div>
+        <div class=" LoginAlertBox5 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">登录失败！</p>
+          <p class="LoginAlertText LoginAlertText4">请输入验证码。验证码为空</p>
+          <p class="OKBtn">返回</p>
+        </div>
+        <div class=" LoginAlertBox6 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">手机号格式正确！</p>
+          <p class="LoginAlertText LoginAlertText4">验证码核对正确！</p>
+          <a href="../index.html" class="OKBtn">恭喜你，登录成功~</a>
+        </div>
+        <div class=" LoginAlertBox7 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">登录失败！</p>
+          <p class="LoginAlertText LoginAlertText4">验证码错误！</p>
+          <p class="OKBtn">返回</p>
+        </div>
+        <div class=" LoginAlertBox8 LoginAlertBox">
+          <p class="LoginAlertText LoginAlertText1">登录失败！</p>
+          <p class="LoginAlertText LoginAlertText4">该手机好已经被注册，请使用密码登录</p>
+          <p class="OKBtn">返回</p>
         </div>
         <div class="loginTop">
           <div class="loginTopWrap">
@@ -76,11 +111,11 @@
                     <input type="text" class="passWordInput" placeholder="请输入登录密码">
                   </p>  
                   <a href="../views/registration.html" class="registration_a">还没账号？免费注册</a> 
-                  <div class="LoginButton">登录</div>       
+                  <div class="LoginButton LoginButton1">登录</div>       
                 </div>
               </li>
               <li class="NoteToLoginWrap">
-                <p class="passwordToLoginText passwordToLoginText2">短信登录(免注册)</p>
+                <p class="passwordToLoginText passwordToLoginText2">临时登录(免注册)</p>
                 <div class="passwordToLoginShow passwordToLoginShow1 ">
                   <p class="p_userWrap">
                     <span class="span_phoneNumber">手机号:</span>
@@ -92,7 +127,8 @@
                     <i class="iconfont iconduanxinyanzhengma"></i>
                     <input type="text" class="passVerificationInput input-val" placeholder="请输入验证码">
                     <canvas class="gainVerificationShow" id="canvas"></canvas>
-                    <div class="gainVerification">刷新验证码</div>
+                    <div class="gainVerification gainVerification0">获取验证码</div>
+                    <div class="gainVerification gainVerification1">刷新验证码</div>
                   </p>  
                   <a href="../views/registration.html" class="registration_a">没手机？试试免费注册</a> 
                   <div class="LoginButton btnLogin">登录</div>       

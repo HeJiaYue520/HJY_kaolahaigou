@@ -58,7 +58,6 @@ $('.RegistrationTopScanLogWrap').on('click', function () {
   }
 })
 
-
 // input获取\失去焦点设置样式
 // 设置用户名输入框功能
 $('.userNameInput').on({
@@ -190,6 +189,7 @@ $('.conceal').on('click', function () {
   }
 })
 
+// passWordInput
 // 点击立即注册功能
 $('.RegistrationButton').on('click', function () {
   var phoneNumStr = /^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/
@@ -216,19 +216,31 @@ $('.RegistrationButton').on('click', function () {
         $('.RegistrationBGWrap').css('display', 'block')
         $('.LoginAlertBox8').css('display', 'block')
         // 保存用户名
-        var UserNameLocaStr = 'UserName'
+        localStorage.removeItem('ShowUser')
+        var UserNameLocaStr = 'User'
         var LocaLenthStr = localStorage.length
-        var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+        var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2) //用户名动态添加
+        var RegistrationPassWordInput = $('.passWordInput').val()
+        // 设置Json对象往里面设置键值对（用户名和密码）
+        var UserJson = {}
+        UserJson.RegistrationUserName = RegistrationUserNameInput
+        UserJson.RegistrationUserPassword = RegistrationPassWordInput
         if (localStorage.length === 0) {
-          localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+          localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
         } else {
+          let nameArr = []
           for (var i = 0, len = localStorage.length; i < len; i++) {
-            if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
-              localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
-            } else {
-              $('.RegistrationBGWrap').css('display', 'block')
-              $('.LoginAlertBox9').css('display', 'block')
-            }
+            nameArr.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+          }
+          console.log(nameArr);
+          var i1 = nameArr.findIndex((value) => value.RegistrationUserName === RegistrationUserNameInput)
+          console.log(i1);
+          if (i1 === -1) {
+            console.log(i1);
+            localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
+          } else {
+            $('.RegistrationBGWrap').css('display', 'block')
+            $('.LoginAlertBox9').css('display', 'block')
           }
         }
       }
@@ -236,19 +248,31 @@ $('.RegistrationButton').on('click', function () {
       $('.RegistrationBGWrap').css('display', 'block')
       $('.LoginAlertBox6').css('display', 'block')
       // 保存用户名
-      var UserNameLocaStr = 'UserName'
+      localStorage.removeItem('ShowUser')
+      var UserNameLocaStr = 'User'
       var LocaLenthStr = localStorage.length
-      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2) //用户名动态添加
+      var RegistrationPassWordInput = $('.passWordInput').val()
+      // 设置Json对象往里面设置键值对（用户名和密码）
+      var UserJson = {}
+      UserJson.RegistrationUserName = RegistrationUserNameInput
+      UserJson.RegistrationUserPassword = RegistrationPassWordInput
       if (localStorage.length === 0) {
-        localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+        localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
       } else {
+        let nameArr = []
         for (var i = 0, len = localStorage.length; i < len; i++) {
-          if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
-            localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
-          } else {
-            $('.RegistrationBGWrap').css('display', 'block')
-            $('.LoginAlertBox9').css('display', 'block')
-          }
+          nameArr.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+        }
+        console.log(nameArr);
+        var i1 = nameArr.findIndex((value) => value.RegistrationUserName === RegistrationUserNameInput)
+        console.log(i1);
+        if (i1 === -1) {
+          console.log(i1);
+          localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
+        } else {
+          $('.RegistrationBGWrap').css('display', 'block')
+          $('.LoginAlertBox9').css('display', 'block')
         }
       }
     } else { //用户名错误
@@ -263,40 +287,63 @@ $('.RegistrationButton').on('click', function () {
       $('.RegistrationBGWrap').css('display', 'block')
       $('.LoginAlertBox8').css('display', 'block')
       // 保存用户名
-      var UserNameLocaStr = 'UserName'
+      localStorage.removeItem('ShowUser')
+      var UserNameLocaStr = 'User'
       var LocaLenthStr = localStorage.length
-      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+      var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2) //用户名动态添加
+      var RegistrationPassWordInput = $('.passWordInput').val()
+      // 设置Json对象往里面设置键值对（用户名和密码）
+      var UserJson = {}
+      UserJson.RegistrationUserName = RegistrationUserNameInput
+      UserJson.RegistrationUserPassword = RegistrationPassWordInput
       if (localStorage.length === 0) {
-        localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+        localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
       } else {
+        let nameArr = []
         for (var i = 0, len = localStorage.length; i < len; i++) {
-          if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
-            localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
-          } else {
-            $('.RegistrationBGWrap').css('display', 'block')
-            $('.LoginAlertBox9').css('display', 'block')
-          }
+          nameArr.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+        }
+        console.log(nameArr);
+        var i1 = nameArr.findIndex((value) => value.RegistrationUserName === RegistrationUserNameInput)
+        console.log(i1);
+        if (i1 === -1) {
+          console.log(i1);
+          localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
+        } else {
+          $('.RegistrationBGWrap').css('display', 'block')
+          $('.LoginAlertBox9').css('display', 'block')
         }
       }
     }
   } else if (phoneNumStr.test(RegistrationUserNameInput)) { //匹配手机格式
     $('.RegistrationBGWrap').css('display', 'block') //手机格式正确
     $('.LoginAlertBox7').css('display', 'block')
-    // 保存用户名
-    var UserNameLocaStr = 'UserName'
+    // 保存用户
+    localStorage.removeItem('ShowUser')
+    var UserNameLocaStr = 'User'
     var LocaLenthStr = localStorage.length
-    var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2)
+    var locaKeyStr = UserNameLocaStr + (LocaLenthStr - 1 + 2) //用户名动态添加
+    var RegistrationPassWordInput = $('.passWordInput').val()
+    // 设置Json对象往里面设置键值对（用户名和密码）
+    var UserJson = {}
+    UserJson.RegistrationUserName = RegistrationUserNameInput
+    UserJson.RegistrationUserPassword = RegistrationPassWordInput
     if (localStorage.length === 0) {
-      localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
+      localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
     } else {
+      let nameArr = []
       for (var i = 0, len = localStorage.length; i < len; i++) {
-        if (!(RegistrationUserNameInput === localStorage.getItem(localStorage.key(i)))) {
-          localStorage.setItem(locaKeyStr, RegistrationUserNameInput)
-          console.log(localStorage.key(i))
-        } else {
-          $('.RegistrationBGWrap').css('display', 'block')
-          $('.LoginAlertBox9').css('display', 'block')
-        }
+        nameArr.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+      }
+      console.log(nameArr);
+      var i1 = nameArr.findIndex((value) => value.RegistrationUserName === RegistrationUserNameInput)
+      console.log(i1);
+      if (i1 === -1) {
+        console.log(i1);
+        localStorage.setItem(locaKeyStr, JSON.stringify(UserJson))
+      } else {
+        $('.RegistrationBGWrap').css('display', 'block')
+        $('.LoginAlertBox9').css('display', 'block')
       }
     }
   } else { //手机格式错误
@@ -315,7 +362,7 @@ $('.OKBtn').on('click', function () {
 var localDataFlog = 0
 $('.markedWordText3').on('click', function () {
   localDataFlog++
-  if (localDataFlog === 3) {
+  if (localDataFlog === 7) {
     localStorage.clear()
     localDataFlog = 0
   }

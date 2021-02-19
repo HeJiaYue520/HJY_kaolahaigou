@@ -600,7 +600,6 @@
 
 
 <!-- 头部公共部分Js功能 -->
-<!-- <script src="../script/jquery-1.8.3.js"></script> -->
 <script>
   // 广告
   // 功能：实现按钮控制关闭广告且下次显示切换广告log
@@ -807,4 +806,17 @@
     $('.cityArrows').css('transform', 'rotate(' + deg + 'deg)')
     $('.cityPlaceShow').css('color', 'rgb(128,128,128)')
   }
+
+  // 判断登录状态
+  $(function () { 
+    if (localStorage.getItem('ShowUser') === null) {
+      console.log('还未登录');
+    }else {
+      console.log(localStorage.getItem('ShowUser'))
+    }
+    
+  })
+
+
+
 </script>
