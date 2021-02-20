@@ -135,6 +135,10 @@
     color: rgb(128, 128, 128);
   }
 
+  .cityPlaceShow:hover {
+    color: orange !important;
+  }
+
 
 
   /* 导航栏左边城市二级菜单 */
@@ -144,7 +148,6 @@
 
   .secondCityPlace {
     position: absolute;
-    z-index: 10;
     width: 370px;
     min-height: 200px;
     overflow-x: hidden;
@@ -153,7 +156,6 @@
     border: 1px solid #FF336E;
     border-top: none;
     display: none;
-    background-color: white;
   }
 
   /* 设置滚动条样式 */
@@ -177,7 +179,7 @@
     height: 30px;
     margin: 7px 0px;
     position: relative;
-    /* background-color: white; */
+    /* background-color: aquamarine; */
     border-bottom: 1px solid #FF336E;
   }
 
@@ -372,21 +374,120 @@
 
 
   /* 导航栏左边登录注册 */
-  .navl_li:nth-of-type(3) {
+  .navlrWrap {
     background-color: transparent;
   }
 
-  .navl_li:nth-of-type(3):hover a {
-    color: rgb(153, 153, 153);
+  .navlrWrap:hover .userName {
+    color: black;
   }
 
-  .navl_li:nth-of-type(3) a:hover {
-    color: #ffffff;
+  .navlrWrap .userName:hover {
+    color: black;
   }
 
   .loginBefore .navRegist {
     margin-left: 15px;
     color: #FF6600 !important;
+  }
+
+  .loginLater {
+    padding: 0px 2px;
+  }
+
+  .loginLater .arrows_grey {
+    position: relative;
+    margin: 0px 0px -2px;
+  }
+
+  .loginLater:hover {
+    background-color: white;
+    border: 1px solid #FF336E;
+    border-bottom: none;
+    /* z-index: 1; */
+  }
+
+  .loginLater:hover .arrows_grey {
+    transform: rotate(180deg);
+  }
+
+  .loginLater:hover .LoginSecNavUl {
+    display: block;
+  }
+
+  .loginBefore {
+    display: block;
+  }
+
+  .loginLater {
+    display: none;
+  }
+
+  /* 登录后状态显示 */
+  .LoginSecNavUl {
+    width: 320px;
+    min-height: 100px;
+    position: absolute;
+    z-index: 10;
+    margin: 0px 0px 0px -3px;
+    padding: 0px 0px 15px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .LoginSecNavLi1 {
+    min-height: 120px;
+    overflow: hidden;
+  }
+
+  .LoginSecNavImgWrap {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 30px 7px 0px 10px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: lightblue;
+  }
+
+  .LoginSecNavImgWrap .LoinImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .LoginSecNavText {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 40px 0px 0px;
+  }
+
+  .LoginSecNavText1 {
+    margin: 10px 0px 0px;
+  }
+
+  .LoginSecNavSpanWarp {
+    position: absolute;
+    font-size: 12px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .LoginSecNavSpanWarp span {
+    color: #999;
+    margin: 0px 2px;
+  }
+
+  .LoginSecNavSpanWarp .LoginSecNavLi2 {
+    color: black;
+    cursor: pointer;
+  }
+
+  .LoginSecNavSpanWarp .LoginSecNavLi2:hover {
+    color: red;
   }
 
   /* 导航栏右边 */
@@ -401,8 +502,6 @@
     padding: 0px 5px;
     text-align: center;
     float: left;
-    cursor: pointer;
-    /* background-color: coral; */
     border: 1px solid transparent;
   }
 
@@ -426,6 +525,559 @@
 
   .navr_li a:hover {
     color: rgb(151, 0, 165);
+  }
+
+  /* 导航栏客户服务二级菜单 */
+  .client {
+    position: relative;
+  }
+
+  .client:hover {
+    border-bottom: 1px solid transparent;
+  }
+
+  .client:hover .clientSceNavWrap {
+    display: block;
+  }
+
+  .clientSceNavWrap {
+    min-width: 150px;
+    min-height: 120px;
+    position: absolute;
+    margin: 0px 0px 0px -6px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .clientUl {
+    min-height: 153px;
+    margin: 2px 0px;
+  }
+
+  .clientUlTittle {
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    text-indent: 1em;
+    font-weight: 600;
+    margin: 2px 0px 0px;
+  }
+
+  .clientUl .clientLi {
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 5px 2px 0px;
+    display: block;
+    float: left;
+  }
+
+  .clientUl .clientLi a {
+    padding: 3px;
+    border-radius: 5px;
+    color: #090723;
+  }
+
+  .clientUl .clientLi a:hover {
+    color: white;
+    background-color: lightgreen;
+  }
+
+  .clientUl2 {
+    min-height: 100px;
+  }
+
+  .clientUl1 {
+    border-bottom: 1px dashed grey;
+  }
+
+  /* 导航栏个人中兴二级菜单 */
+  .personal {
+    position: relative;
+  }
+
+  .personal:hover {
+    border-bottom: 1px solid transparent;
+  }
+
+  .personal:hover .personalSecNavWrap {
+    display: block;
+  }
+
+  .personalSecNavWrap {
+    min-width: 110px;
+    min-height: 120px;
+    position: absolute;
+    margin: 0px 0px 0px -6px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .personalUl {
+    width: 90px;
+    margin: 2px auto;
+    padding: 0px 0px 5px;
+    border-bottom: 1px dashed grey;
+  }
+
+  .personalUl3 {
+    border-bottom: 1px dashed transparent;
+  }
+
+  .personalUl .personalLi {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 5px 2px 0px;
+    display: block;
+  }
+
+  .personalUl .personalLi a {
+    padding: 3px;
+    border-radius: 5px;
+    color: #090723;
+  }
+
+  .personalUl .personalLi a:hover {
+    color: white;
+    background-color: rgb(200, 150, 250);
+  }
+
+  /* 导航栏考拉会员样式 */
+  .navRinght .kaolaVipNavWrap:hover {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  .navRinght .kaolaVipNavWrap a {
+    color: orangered;
+  }
+
+  /* 导航栏购物车样式 */
+  .shoppingCarNavWrap {
+    height: 39px;
+    line-height: 36px;
+    padding: 0px 5px;
+    text-align: center;
+    float: left;
+    position: relative;
+    border: 1px solid transparent;
+  }
+
+  .shoppingCarNavWrap a {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .shoppingCarNavWrap a:hover {
+    color: orange !important;
+  }
+
+  .shoppingCarSecNavWrap1 {
+    width: 350px;
+    height: 220px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 0px -6px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .shoppingCarSecNavWrap2 {
+    width: 350px;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 0px -6px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .shoppingCarSecNavWrap2 img {
+    width: 250px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .shoppingCarSecNavWrap2:hover img {
+    transform: scale(1.2, 1.2);
+  }
+
+  .shoppingCarSecNavWrap3 {
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 0px -6px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .shoppingCarSecNavWrap3 img {
+    width: 300px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .shoppingCarSecNavWrap3:hover img {
+    transform: scale(1.2, 1.2);
+  }
+
+  .unLoginToSoppingLink {
+    display: inline-block;
+    width: 220px;
+    height: 20px;
+    line-height: 20px;
+    color: #090723 !important;
+  }
+
+  .unLoginToSoppingLink:hover {
+    color: orangered !important;
+    text-decoration: underline;
+  }
+
+  .LoginShowSoppingCar {
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    background-color: #FF6600;
+  }
+
+  /* 购物车二级菜单数据渲染部分样式 */
+  .examineAllWrap {
+    width: 100%;
+    height: 35px;
+  }
+
+  .examineText {
+    height: 20px;
+    line-height: 20px;
+    color: black;
+  }
+
+  .examineText1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 10px;
+    float: left;
+  }
+
+  .examineText2 {
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+    margin: 10px 15px 0px 0px;
+  }
+
+  .examineText2:hover {
+    text-decoration: underline !important;
+    color: orangered;
+  }
+
+  .shoppingCarSecUl {
+    min-width: 350px;
+    height: 150px;
+    overflow-x: hidden;
+    margin: 2px 0px;
+    background-color: #E9E9E9;
+  }
+
+  /* 设置滚动条样式 */
+  .shoppingCarSecUl::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .shoppingCarSecUl::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 50, 50, 0.2);
+  }
+
+  .shoppingCarSecUl::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: rgba(110, 230, 250, 0.1);
+  }
+
+  .shoppingCarSecLi {
+    width: 310px;
+    min-height: 50px;
+    padding: 7px;
+    margin: 0px auto;
+    position: relative;
+    border-bottom: 1px dashed grey;
+  }
+
+  .soppingSecItemImgSrc {
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+
+  .soppingSecItemDetailWrap {
+    margin: 0px 0px 0px 15px;
+    float: left;
+  }
+
+  .soppingSecItemDetail {
+    width: 140px;
+    height: 50px;
+    line-height: 25px;
+    text-align: left;
+    font-size: 14px;
+    color: grey;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .soppingSecItemSpriceWrap {
+    width: 80px;
+    height: 50px;
+    float: right;
+    margin: 0px 7px 0px 0px;
+  }
+
+  .soppingSecItemSprice {
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+  }
+
+  .DelsoppingSecItem {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: orangered;
+  }
+
+  .goshoppingCarLink a {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0px auto;
+    color: rgb(20, 0, 250);
+  }
+
+  .shoppingCarNavWrap:hover .goshoppingCarLink a {
+    color: rgb(20, 0, 250);
+  }
+
+  .goshoppingCarLink a:hover {
+    color: #FF6600 !important;
+  }
+
+  .showBox {
+    display: block;
+  }
+
+  /* 网站导航二级菜单数据 */
+  .websiteNavigationSecWrap {
+    width: 1190px;
+    height: 170px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 0px -900px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .websiteNavigation:hover .websiteNavigationSecWrap {
+    display: block;
+  }
+
+  .websiteNavigationSecUl {
+    width: 273px;
+    height: 170px;
+    float: left;
+    margin: 7px 5px 0px;
+    padding: 0px 0px 0px 10px;
+    border-left: 1px dashed grey;
+  }
+
+  .websiteNavigationSecLiWrap {
+    width: 273px;
+    height: 170px;
+    overflow-x: hidden;
+  }
+
+  .websiteNavigationSecUl:nth-of-type(1) {
+    border-left: 1px dashed transparent;
+  }
+
+  .websiteNavigationSecLiWrap::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .websiteNavigationSecLiWrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 50, 50, 0.2);
+  }
+
+  .websiteNavigationSecLiWrap::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: rgba(110, 230, 250, 0.1);
+  }
+
+  .websiteNavigationSecUl1Tittle {
+    text-align: left;
+    text-indent: 1em;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px dashed #FF336E;
+  }
+
+  .websiteNavigationSecLiWrap .websiteNavigationSecLi {
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 5px;
+    float: left;
+  }
+
+  .websiteNavigationSecLi a {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding: 2px 3px;
+    color: #090723;
+  }
+
+  .websiteNavigationSecLi a:hover {
+    color: white;
+    background-color: cornflowerblue;
+  }
+
+  /* 手机考拉二级菜单样式 */
+  .phoneKaolaSecShow {
+    width: 450px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px 0px 10px;
+    margin: 0px 0px 0px -265px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .phoneKaola:hover .phoneKaolaSecShow {
+    display: block;
+  }
+
+  .phoneKaolaShowUl {
+    padding: 10px;
+  }
+
+  .phoneKaolaShowLi {
+    width: 130px;
+    height: 140px;
+    margin: 0px 6px;
+    float: left;
+  }
+
+  .phoneKaolaShowLi img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .phoneKaolaShowLi img:hover {
+    transform: scale(1.15, 1.15);
+  }
+
+  .phoneKaolaShowLi p {
+    width: 120px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  /* 导航栏更多设置样式 */
+  .moreSettingShow {
+    width: 150px;
+    min-height: 80px;
+    overflow: hidden;
+    position: absolute;
+    margin: 0px 0px 0px -65px;
+    display: none;
+    border: 1px solid #FF336E;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 2px 2px #ff4378;
+    background-color: white;
+  }
+
+  .moreSettingWrap:hover .moreSettingShow {
+    display: block;
+  }
+
+  .moreSettingShowUl {
+    padding: 5px;
+  }
+
+  .moreSettingShowLi {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 3px auto;
+    font-size: 14px;
+    border-bottom: 1px solid grey;
+  }
+
+  .moreSettingShowLi0 {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 3px auto;
+    font-size: 12px;
+  }
+
+  .moreSettingShowLi p {
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .moreSettingShowLi p:hover {
+    text-decoration: underline;
+    color: orangered;
+    cursor: pointer;
   }
 </style>
 
@@ -504,81 +1156,320 @@
               <a href="../views/registration.html" class="navRegist">免费注册</a>
             </div>
             <!-- 登录后，登录注册框的状态 -->
-            <!-- <div class="loginLater">
-              <a href="#" class="userName">kl001</a>
+            <div class="loginLater">
+              <a href="#" class="userName">2834007710@qq.com</a>
               <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-              <ul>
-                <li></li>
-              </ul>
-            </div>  -->
+              <div class="LoginSecNavUl">
+                <div class="LoginSecNavLi1">
+                  <div class="LoginSecNavImgWrap">
+                    <img src="../images/niuqichongtian.gif" alt="" class="LoinImg">
+                  </div>
+                  <p class="LoginSecNavText">考拉值：<span>495</span> </p>
+                  <p class="LoginSecNavText LoginSecNavText1">考拉等级：<span>普通会员</span></p>
+                </div>
+                <div class="LoginSecNavSpanWarp">
+                  <span class="LoginSecNavLi2">账号管理</span>
+                  <span>|</span>
+                  <span class="LoginSecNavLi2 LoginSecNavLi3">退出登录</span>
+                </div>
+              </div>
+            </div>
           </div>
         </ul>
       </div>
       <div class="topright">
         <ul class="navRinght">
           <!-- 导航栏右边客户服务 -->
-          <div class="navr_li">
-            <a href="#">客服服务</a>
+          <div class="navr_li client">
+            <a href="#">客户服务</a>
             <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <div class="clientSceNavWrap">
+              <ul class="clientUl clientUl1">
+                <p class="clientUlTittle">客户</p>
+                <li class="clientLi">
+                  <a href="#">帮助中心</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">售后服务</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">在线客服</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">意见建议</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">电话客服</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">客服邮箱</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">金融咨询</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">全球售有服</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">企业客服</a>
+                </li>
+              </ul>
+              <ul class="clientUl clientUl2">
+                <p class="clientUlTittle">商户</p>
+                <li class="clientLi">
+                  <a href="#">合作招商</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">成长中心</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">商家后台</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">考麦工作台</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">商家帮助</a>
+                </li>
+                <li class="clientLi">
+                  <a href="#">规则平台</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边个人中心 -->
-          <div class="navr_li">
+          <div class="navr_li personal">
             <a href="#">个人中心</a>
             <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <div class="personalSecNavWrap">
+              <ul class="personalUl personalUl1">
+                <li class="personalLi">
+                  <a href="#">我的优惠券</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我的购物津贴</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我的红包</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我的考拉豆</a>
+                </li>
+              </ul>
+              <ul class="personalUl personalUl2">
+                <li class="personalLi">
+                  <a href="#">帐号管理</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我的实名认证</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我的发票抬头</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我收藏的商品</a>
+                </li>
+                <li class="personalLi">
+                  <a href="#">我关注的品牌</a>
+                </li>
+              </ul>
+              <ul class="personalUl personalUl3">
+                <li class="personalLi">
+                  <a href="#">售后管理</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边考拉会员 -->
-          <div class="navr_li">
+          <div class="navr_li kaolaVipNavWrap">
             <a href="#">考拉会员</a>
-            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
+            <!-- <img src="../images/arrows_grey.png" alt="" class="arrows_grey"> -->
             <ul>
               <li></li>
             </ul>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边购物车 -->
-          <div class="navr_li">
+          <div class="shoppingCarNavWrap">
             <img src="../images/shopCar_grey.png" alt="" class="shopCarLog">
-            <a href="#">购物车</a>
-            <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <a href="#" class="shoppingCarNavWrapShowText">购物车</a>
+            <img src="../images/arrows_grey.png" alt="" class="arrows_grey shoppingArrows">
+            <!-- 当用户登录且放置商品的数据展示 -->
+            <div class="shoppingCarSecNavWrap shoppingCarSecNavWrap1">
+              <div class="examineAllWrap">
+                <span class="examineText examineText1">最近添加的考拉宝贝 :</span>
+                <span class="examineText examineText2">关闭</span>
+              </div>
+              <ul class="shoppingCarSecUl">
+                <li class="shoppingCarSecLi soppingLittleItems">
+                  <img
+                    src="https://kaola-pop.oss.kaolacdn.com/5d6c7dd170294e6db8b29560ffd08829_800_800.jpg?x-oss-process=image/resize,w_190,h_190/quality,q_95/format,webp"
+                    alt="" class="soppingSecItemImgSrc">
+                  <div class="soppingSecItemDetailWrap">
+                    <p class="soppingSecItemDetail">【日本直购】SPA TREATMENT 保湿蛇毒眼膜升级款红色款 60片</p>
+                  </div>
+                  <div class="soppingSecItemSpriceWrap">
+                    <p class="soppingSecItemSprice">￥2169</p>
+                  </div>
+                  <span class="DelsoppingSecItem">删除</span>
+                </li>
+                <li class="shoppingCarSecLi soppingLittleItems">
+                  <img
+                    src="https://kaola-pop.oss.kaolacdn.com/5d6c7dd170294e6db8b29560ffd08829_800_800.jpg?x-oss-process=image/resize,w_190,h_190/quality,q_95/format,webp"
+                    alt="" class="soppingSecItemImgSrc">
+                  <div class="soppingSecItemDetailWrap">
+                    <p class="soppingSecItemDetail">【日本直购】SPA TREATMENT 保湿蛇毒眼膜升级款红色款 60片</p>
+                  </div>
+                  <div class="soppingSecItemSpriceWrap">
+                    <p class="soppingSecItemSprice">￥2169</p>
+                  </div>
+                  <span class="DelsoppingSecItem">删除</span>
+                </li>
+              </ul>
+              <div class="goToshoppingCarWrap">
+                <p class="goshoppingCarLink"><a href="#">点击查看更多购买商品详情</a></p>
+              </div>
+            </div>
+            <!-- 购物车为空时 -->
+            <div class="shoppingCarSecNavWrap shoppingCarSecNavWrap2">
+              <img src="../images/shoppingCarNavLog.jpg" alt="">
+              <span class="examineText examineText2">关闭</span>
+            </div>
+            <!-- 购物车未登录时（默认） -->
+            <div class="shoppingCarSecNavWrap shoppingCarSecNavWrap3">
+              <img src="../images/unLogin.jpg" alt="">
+              <a href="../views/login.html" class="unLoginToSoppingLink">什么？还未登录！请先登录查看商品详情</a>
+              <span class="examineText examineText2">关闭</span>
+            </div>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边网站导航 -->
-          <div class="navr_li">
+          <div class="navr_li websiteNavigation">
             <a href="#">网站导航</a>
             <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <div class="websiteNavigationSecWrap">
+              <ul class="websiteNavigationSecUl">
+                <p class="websiteNavigationSecUl1Tittle">特色主题 >></p>
+                <div class="websiteNavigationSecLiWrap">
+                  <li class="websiteNavigationSecLi"><a href="#">新品首发</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉金融</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">全球售</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">国际站</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉预售</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">台湾售</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">俄语站</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">装机大师</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">0元评测</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">港澳售</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">优惠券</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">秒杀</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">闪购</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">陪伴计划</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">出海招商</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">拍拍二手</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">买什么</a></li>
+                </div>
+              </ul>
+              <ul class="websiteNavigationSecUl">
+                <p class="websiteNavigationSecUl1Tittle">行业频道 >></p>
+                <div class="websiteNavigationSecLiWrap">
+                  <li class="websiteNavigationSecLi"><a href="#">手机</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">智能数码</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">玩3C</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">电脑办公</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">家用电器</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉智能</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉服饰</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉生鲜</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">家装城</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">母婴</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">食品</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">农资频道</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">整车</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">图书</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">劳动防护</a></li>
+                </div>
+              </ul>
+              <ul class="websiteNavigationSecUl">
+                <p class="websiteNavigationSecUl1Tittle">生活服务 >></p>
+                <div class="websiteNavigationSecLiWrap">
+                  <li class="websiteNavigationSecLi"><a href="#">考拉众筹</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">白条</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉生态</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉小金库</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">理财</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">话费</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">水电煤</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">彩票</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">旅行</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">机票酒店</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">电影票</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉到家</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">游戏</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">拍拍回收</a></li>
+                </div>
+              </ul>
+              <ul class="websiteNavigationSecUl">
+                <p class="websiteNavigationSecUl1Tittle">更多精选 >></p>
+                <div class="websiteNavigationSecLiWrap">
+                  <li class="websiteNavigationSecLi"><a href="#">合作招商</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉通信</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉E卡</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">企业采购</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">服务市场</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">办公生活馆</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">校园加盟</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">考拉社区</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">游戏社区</a></li>
+                  <li class="websiteNavigationSecLi"><a href="#">知识产权维权</a></li>
+                </div>
+              </ul>
+            </div>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边手机考拉 -->
-          <div class="navr_li">
+          <div class="navr_li phoneKaola">
             <a href="#">手机考拉</a>
             <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <div class="phoneKaolaSecShow">
+              <ul class="phoneKaolaShowUl">
+                <li class="phoneKaolaShowLi">
+                  <img src="//kaola-haitao.oss.kaolacdn.com/48b72cfe-e953-4164-b0bd-b0cf7ba557d5.png" alt="">
+                  <p>考拉微博，扫码关注</p>
+                </li>
+                <li class="phoneKaolaShowLi">
+                  <img src="//kaola-haitao.oss.kaolacdn.com/161cc13b-ec21-4083-9cc9-7b4b38c0a8d8.png" alt="">
+                  <p>考拉微信，扫码关注</p>
+                </li>
+                <li class="phoneKaolaShowLi">
+                  <img src="https://kaola-haitao.oss.kaolacdn.com/a22c58ba-e800-4286-9a6e-0d4d159a2920.png" alt="">
+                  <p>扫码下载手机考拉APP</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <span class="navCut"></span>
           <!-- 导航栏右边更多设置 -->
-          <div class="navr_li">
+          <div class="navr_li moreSettingWrap">
             <img src="../images/moreSettingLog.png" alt="" class="moreSetting">
             <a href="#" class="moreSetting">更多设置</a>
             <img src="../images/arrows_grey.png" alt="" class="arrows_grey">
-            <ul>
-              <li></li>
-            </ul>
+            <div class="moreSettingShow">
+              <ul class="moreSettingShowUl">
+                <li class="moreSettingShowLi">
+                  <p>Banner设置</p>
+                </li>
+                <li class="moreSettingShowLi">
+                  <p>公共头尾设置</p>
+                </li>
+                <li class="moreSettingShowLi">
+                  <p>商品列表设置</p>
+                </li>
+                <li class="moreSettingShowLi0"><span>更多设置(敬请期待)</span></li>
+              </ul>
+            </div>
           </div>
           <!-- <span class="navCut"></span> -->
         </ul>
@@ -781,6 +1672,7 @@
     $('.provinceShow').css('display', 'none')
     $('.municipalityShow').css('display', 'block')
   }
+
   // 城市打开样式方法
   function cityPlaceShowOpen() {
     $('.cityPlace').css('border', '0.994318px solid rgb(255, 51, 110)')
@@ -808,15 +1700,83 @@
   }
 
   // 判断登录状态
-  $(function () { 
+  $(function () {
     if (localStorage.getItem('ShowUser') === null) {
-      console.log('还未登录');
-    }else {
-      console.log(localStorage.getItem('ShowUser'))
+      $('.loginLater').css('display', 'none')
+      $('.loginBefore').css('display', 'block')
+    } else {
+      console.log(isExistGoodsFlog);
+      console.log('已经登录');
+      $('.loginLater').css('display', 'block')
+      $('.loginBefore').css('display', 'none')
+      // 渲染已登录状态的用户名
+      let UserNameStr = localStorage.getItem('ShowUser')
+      $('.userName').text(UserNameStr)
+      $('.navlrWrap').on('hover', function () {
+        if (localStorage.getItem('ShowUser') === null) {
+          console.log('还未登录');
+        } else {
+          $('.LoginSecNavLi3').on('click', function () {
+            console.log('移除成功');
+            localStorage.removeItem('ShowUser')
+            $('.loginLater').css('display', 'none')
+            $('.loginBefore').css('display', 'block')
+            $('.loginLater').css('display', 'none')
+            return false
+          })
+        }
+      })
     }
-    
+
+    // 导航栏购物车打开数据渲染效果
+    var isExistGoodsFlog = 0
+    $('.shoppingCarNavWrap').on('click', function () {
+      // 清除所有shoppingCarSecNavWrap的showBox类名
+      if (localStorage.getItem('ShowUser') === null) {
+        console.log('还未登录');
+        shoppingCarNavWrapOpen()
+        $('.shoppingCarSecNavWrap3').css('display', 'block')
+      } else if (isExistGoodsFlog === 0) {
+        console.log('还未添加过商品')
+        shoppingCarNavWrapOpen()
+        $('.shoppingCarSecNavWrap2').css('display', 'block')
+      } else if (isExistGoodsFlog === 1) {
+        console.log('登录且添加过商品，进行商品数据渲染')
+        shoppingCarNavWrapOpen()
+        $('.shoppingCarSecNavWrap1').css('display', 'block')
+      }
+      console.log(localStorage.getItem('ShowUser'))
+      // 导航栏购物车关闭效果
+      $('.examineText2').on('click', function () {
+        // $('.shoppingCarSecNavWrap').css('display','none')
+        shoppingCarNavWrapClose()
+        return false
+      })
+    })
   })
 
-
-
+  // 城市打开样式方法
+  function shoppingCarNavWrapOpen() {
+    $('.shoppingCarNavWrap').css('border', '0.994318px solid rgb(255, 51, 110)')
+    $('.shoppingCarNavWrap').css('border-bottom', '0px none rgba(0, 0, 0)')
+    $('.shoppingCarNavWrap').css('height', '38px')
+    $('.shoppingCarNavWrap').css('background-color', 'white')
+    $('.shopCarLog').prop('src', '../images/shopCar_red.png')
+    $('.shoppingArrows').prop('src', '../images/arrows_red.png')
+    var deg = 180
+    $('.shoppingArrows').css('transform', 'rotate(' + deg + 'deg)')
+    $('.shoppingCarNavWrapShowText').css('color', '#ff4378')
+  }
+  // 城市关闭样式方法
+  function shoppingCarNavWrapClose() {
+    $('.shoppingCarNavWrap').css('border', '1px solid rgba(0, 0, 0, 0)')
+    $('.shoppingCarNavWrap').css('height', '36px')
+    $('.shoppingCarNavWrap').css('background-color', '#090723')
+    $('.shopCarLog').prop('src', '../images/shopCar_grey.png')
+    $('.shoppingArrows').prop('src', '../images/arrows_grey.png')
+    $('.shoppingCarSecNavWrap').css('display', 'none')
+    var deg = 0
+    $('.shoppingArrows').css('transform', 'rotate(' + deg + 'deg)')
+    $('.shoppingCarNavWrapShowText').css('color', 'rgb(128,128,128)')
+  }
 </script>
