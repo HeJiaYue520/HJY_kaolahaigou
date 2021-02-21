@@ -144,6 +144,7 @@
   /* 导航栏左边城市二级菜单 */
   .cityPlace {
     position: relative;
+    z-index: 15;
   }
 
   .secondCityPlace {
@@ -156,6 +157,7 @@
     border: 1px solid #FF336E;
     border-top: none;
     display: none;
+    background-color: white;
   }
 
   /* 设置滚动条样式 */
@@ -179,7 +181,7 @@
     height: 30px;
     margin: 7px 0px;
     position: relative;
-    /* background-color: aquamarine; */
+    z-index: 15;
     border-bottom: 1px solid #FF336E;
   }
 
@@ -201,6 +203,7 @@
     padding: 0px 7px;
     float: left;
     position: relative;
+    z-index: 15;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border: 1px solid #FF336E;
@@ -312,6 +315,7 @@
     padding: 0px 7px;
     margin: 1px 0px 0px -100px;
     position: absolute;
+    z-index: 15;
     display: none;
     background-color: bisque;
   }
@@ -397,6 +401,7 @@
 
   .loginLater .arrows_grey {
     position: relative;
+    z-index: 15;
     margin: 0px 0px -2px;
   }
 
@@ -428,7 +433,7 @@
     width: 320px;
     min-height: 100px;
     position: absolute;
-    z-index: 10;
+    z-index: 15;
     margin: 0px 0px 0px -3px;
     padding: 0px 0px 15px;
     display: none;
@@ -471,6 +476,7 @@
 
   .LoginSecNavSpanWarp {
     position: absolute;
+    z-index: 15px;
     font-size: 12px;
     top: 5px;
     right: 5px;
@@ -530,6 +536,7 @@
   /* 导航栏客户服务二级菜单 */
   .client {
     position: relative;
+    z-index: 15;
   }
 
   .client:hover {
@@ -544,6 +551,7 @@
     min-width: 150px;
     min-height: 120px;
     position: absolute;
+    z-index: 15;
     margin: 0px 0px 0px -6px;
     display: none;
     border: 1px solid #FF336E;
@@ -599,6 +607,7 @@
   /* 导航栏个人中兴二级菜单 */
   .personal {
     position: relative;
+    z-index: 15;
   }
 
   .personal:hover {
@@ -669,6 +678,7 @@
     text-align: center;
     float: left;
     position: relative;
+    z-index: 15;
     border: 1px solid transparent;
   }
 
@@ -824,6 +834,7 @@
     padding: 7px;
     margin: 0px auto;
     position: relative;
+    z-index: 15;
     border-bottom: 1px dashed grey;
   }
 
@@ -838,6 +849,7 @@
     float: left;
   }
 
+  /* 文字两行溢出显示省略号 */
   .soppingSecItemDetail {
     width: 140px;
     height: 50px;
@@ -895,18 +907,15 @@
     color: #FF6600 !important;
   }
 
-  .showBox {
-    display: block;
-  }
-
   /* 网站导航二级菜单数据 */
   .websiteNavigationSecWrap {
     width: 1190px;
     height: 170px;
     overflow: hidden;
     position: absolute;
+    z-index: 16;
     padding: 0px 0px 10px;
-    margin: 0px 0px 0px -900px;
+    margin: 0px 0px 0px -905px;
     display: none;
     border: 1px solid #FF336E;
     border-top: 1px solid transparent;
@@ -986,6 +995,7 @@
     width: 450px;
     overflow: hidden;
     position: absolute;
+    z-index: 16;
     padding: 0px 0px 10px;
     margin: 0px 0px 0px -265px;
     display: none;
@@ -1036,7 +1046,8 @@
     min-height: 80px;
     overflow: hidden;
     position: absolute;
-    margin: 0px 0px 0px -65px;
+    z-index: 16;
+    margin: 0px 0px 0px -64px;
     display: none;
     border: 1px solid #FF336E;
     border-top: 1px solid transparent;
@@ -1079,6 +1090,448 @@
     color: orangered;
     cursor: pointer;
   }
+
+  /* 头部搜索框部分 */
+  #searchBoxTopFix {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    display: none;
+    box-shadow: 2px 2px 5px grey;
+    background-color: white;
+  }
+
+  .searchBox {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .searchBoxWarp {
+    width: 1190px;
+    height: 118px;
+    margin: 0px auto;
+    border: 1px solid transparent;
+  }
+
+  .searchBoxLeftImgWrap {
+    width: 90px;
+    height: 90px;
+    float: left;
+    padding: 0px 50px;
+    margin: 15px 20px 0px;
+    overflow: hidden;
+  }
+
+  .searchLogGif {
+    width: 90px;
+    display: none;
+  }
+
+  /* 搜索中间主要区样式 */
+  .searchInputWrap {
+    width: 580px;
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin: 10px 0px 0px;
+  }
+
+  .SearchApiWrapUl {
+    min-width: 120px;
+    min-height: 20px;
+    position: absolute;
+    left: 30px;
+  }
+
+  .SearchApiWrapLi {
+    margin: 0px 7px;
+    padding: 2px 3px 1px;
+    float: left;
+    font-size: 12px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #FF2337;
+    color: white;
+    background: linear-gradient(to bottom right, #ff5000 30%, #ff9555 100%);
+  }
+
+  .SearchApiWrapLi:hover {
+    background: linear-gradient(to bottom right, #ff8349 20%, #ff5000 100%);
+  }
+
+  .searchInputMain {
+    min-width: 550px;
+    min-height: 45px;
+    margin: 20px 0px 0px;
+    position: relative;
+  }
+
+  .SearchInput {
+    width: 520px;
+    height: 45px;
+    font-size: 16px;
+    outline-style: none;
+    border-radius: 25px;
+    padding: 5px 0px 5px 50px;
+    border: 2px solid #FF2337;
+  }
+
+  .searchInputMain img {
+    position: absolute;
+  }
+
+  .SearchLeftLog {
+    width: 30px;
+    left: 10px;
+    top: 14px;
+  }
+
+  .SearchRightLog {
+    width: 30px;
+    padding: 12.5px 23px 12.5px 23px;
+    right: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+    border: 2px solid #FF2337;
+    background: linear-gradient(to right bottom, #FF2337 40%, #ff457d 100%)
+  }
+
+  .SearchRightLog:hover {
+    background: linear-gradient(to right bottom, #ff4757 40%, #ff1a1e 100%)
+  }
+
+  .SearchLittleListWrapUl {
+    min-width: 500px;
+    height: 25px;
+    padding: 0px 0px 0px 35px;
+  }
+
+  .SearchLittleListWrapLi {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin: 0px 3px;
+    float: left;
+  }
+
+  .SearchLittleListWrapLi a {
+    color: #090723;
+  }
+
+  .SearchLittleListWrapLi a:hover {
+    color: orangered;
+  }
+
+  .SearchLittleListWrapLi:nth-of-type(2) a {
+    color: orangered;
+  }
+
+  .SearchCut {
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    float: left;
+    margin: 0px 2px;
+    color: #999;
+  }
+
+  /* 搜索框右边自定义广告展示区 */
+  .SearchRightCustom {
+    min-width: 350px;
+    min-height: 95px;
+    float: right;
+    margin: 10px 20px 0px 0px;
+    /* background-color: #ff4378; */
+  }
+
+  .SearchRightCustom img {
+    width: 300px;
+    height: 70px;
+    float: left;
+    margin: 15px 0px 0px 50px;
+  }
+
+  .SearchRightCustomWrap {
+    min-width: 150px;
+    min-height: 90px;
+    float: left;
+    background-color: #00ff48;
+  }
+
+  .SearchRightCustomWrap1 {
+    min-width: 190px;
+    min-height: 90px;
+    float: right;
+    background-color: #ffe100;
+  }
+
+  /* 搜索框下方三级菜单展示区样式 */
+  .threeLevelDateShow {
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+  }
+
+  .threeLevelDateShowWrap {
+    width: 1190px;
+    height: 40px;
+    margin: 0px auto;
+  }
+
+  /* 第一个三级菜单数据展示样式 */
+  .FisThreeLevelDateShowWrap {
+    width: 226px;
+    height: 37px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    float: left;
+    border: 2px solid black;
+    background: linear-gradient(90deg, red, #ff3264);
+  }
+
+  .FisThreeLevelDateShowWrap:hover .FisThreeLevelDateShowUl {
+    display: block;
+  }
+
+  .FisThreeLevelDateShowTittleImgWrap {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 13px 0px 0px 30px;
+    overflow: hidden;
+  }
+
+  .FisThreeLevelDateShowTittleImg {
+    width: 1800px;
+  }
+
+  .FisThreeLevelDateShowTittleText {
+    text-align: left;
+    text-indent: 40px;
+    margin: 8px 0px 0px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .FisThreeLevelDateShowUl {
+    width: 226px;
+    min-height: 100px;
+    position: absolute;
+    position: relative;
+    z-index: 10;
+    display: none;
+    left: -2px;
+    top: 8px;
+    border: 2px solid black;
+  }
+
+  .FisThreeLevelDateShowUl:hover .FisThreeLevelDateShowBigBox {
+    display: block;
+  }
+
+  .FisThreeLevelDateShowLi {
+    width: 222px;
+    min-height: 36px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-bottom: 2px dashed grey;
+    background: linear-gradient(90deg, red, #ff3264);
+  }
+
+  .FisThreeLevelDateShowLi:hover {
+    background: white;
+  }
+
+  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiText {
+    color: red;
+  }
+
+  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiSpan {
+    color: red;
+  }
+
+  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiImgWrap .FisThreeLevelDateShowLiImg {
+    display: none;
+  }
+
+  .FisThreeLevelDateShowLiImgWrap {
+    width: 20px;
+    height: 20px;
+    float: left;
+    overflow: hidden;
+    margin: 10px 0px 0px 25px;
+  }
+
+  .FisThreeLevelDateShowLiImgWrap img {
+    width: 20px;
+  }
+
+  .FisThreeLevelDateShowLiText {
+    height: 20px;
+    line-height: 20px;
+    margin: 10px 0px;
+    text-align: left;
+    text-indent: 37px;
+    color: white;
+  }
+
+  .FisThreeLevelDateShowLiSpan {
+    font-size: 20px;
+    float: right;
+    margin: -34px 20px 0px 0px;
+    color: white;
+  }
+
+  .FisThreeLevelDateShowLi:nth-of-type(12) {
+    border-bottom: 2px dashed transparent;
+  }
+
+  /* 三级数据渲染的大盒子 */
+  .FisThreeLevelDateShowBigBox {
+    width: 958px;
+    height: 528px;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: -2px;
+    left: 226px;
+    border: 2px solid black;
+    background-color: white;
+  }
+
+  /* 设置滚动条样式 */
+  .FisThreeLevelDateShowBigBox::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .FisThreeLevelDateShowBigBox::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .FisThreeLevelDateShowBigBox::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .FisThreeLevelDateShowBigBoxWrap {
+    width: 100%;
+    min-height: 800px;
+  }
+
+  /* 鼠标悬停渲染相对应的数据 */
+  .FisThreeLevelDateShoppingListBox {
+    width: 290px;
+    min-height: 250px;
+    margin: 10px 0px 0px 14px;
+    float: left;
+    border-radius: 15px;
+    border: 3px dashed pink;
+    background-color: linen;
+  }
+
+  .ShoppingListBoxTittle {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-bottom: 1px dashed grey;
+  }
+
+  .ShoppingListBoxTittle a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #090723;
+  }
+
+  .ShoppingListBoxTittle a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+
+  .ShoppingListBoxUl {
+    background-color: #FF336E;
+  }
+
+  .ShoppingListBoxli {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    float: left;
+  }
+
+  .ShoppingListBoxli a {
+    padding: 2px 3px;
+    margin: 5px 7px;
+    border-radius: 5px;
+    color: #090723;
+  }
+
+  .ShoppingListBoxli a:hover {
+    color: white;
+    background-color: lightskyblue;
+  }
+
+  /* 三级数据展示中间的文字样式 */
+  .SearchDateShowMidUl {
+    width: 700px;
+    height: 37px;
+    /* 后续加入照片悬浮效果用的上 */
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 10;
+    margin: 0px 13px;
+    float: left;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid black;
+    background-color: #CCCCCC;
+  }
+
+  .SearchDateShowMidli {
+    width: 80px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px 10px;
+    float: left;
+  }
+
+  .SearchDateShowMidli a {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .SearchDateShowMidli a:hover {
+    color: #FF336E;
+  }
+
+
+  /* 第二个三级菜单数据展示样式 */
+  .SecThreeLevelDateShowWrap {
+    width: 226px;
+    height: 37px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    float: right;
+    border: 2px solid black;
+    background: linear-gradient(90deg, #ff9000, #ff5000);
+  }
+
+  .showBox {
+    display: block;
+  }
 </style>
 
 
@@ -1100,6 +1553,88 @@
     </div>
   </div>
   <!-- advert_finish 头部广告栏结束 -->
+
+  <div id="searchBoxTopFix" class="searchBox">
+    <div class="searchBoxWarp">
+      <!-- 搜索框左边GIFLog区 start -->
+      <div class="searchBoxLeftImgWrap">
+        <img src="https://img.zcool.cn/community/0105cd5aba0e9ba8012062e35de08e.gif" alt=""
+          class="searchLogGif searchLogGif1 showBox">
+        <img src="https://img.zcool.cn/community/019c4a5aba0e9ba8012062e3c041fc.gif" alt=""
+          class="searchLogGif searchLogGif2">
+        <img src="https://img.zcool.cn/community/01a5f75aba0e9ba801218207dcf790.gif" alt=""
+          class="searchLogGif searchLogGif3">
+        <img src="https://img.zcool.cn/community/01ac1f5aba0e9ba801218207269669.gif" alt=""
+          class="searchLogGif searchLogGif4">
+      </div>
+      <!-- 搜索框左边GIFLog区 finish -->
+
+      <!-- 搜索框中间主要区 start -->
+      <div class="searchInputWrap">
+        <ul class="SearchApiWrapUl">
+          <li class="SearchApiWrapLi SearchApiWrapLiB">宝贝</li>
+          <li class="SearchApiWrapLi SearchApiWrapLiW">网易</li>
+          <li class="SearchApiWrapLi SearchApiWrapLiD">店铺</li>
+        </ul>
+        <div class="searchInputMain">
+          <img src="../images/searchLog.png" alt="" class="SearchLeftLog">
+          <input type="text" name="" value="" class="SearchInput" placeholder="请输入想搜索的商品">
+          <img src="https://kaola-haitao.oss.kaolacdn.com/6e4da089-9347-4dc2-be19-4962832a4a5c.png" alt=""
+            class="SearchRightLog">
+        </div>
+        <ul class="SearchLittleListWrapUl">
+          <li class="SearchLittleListWrapLi">
+            <a href="#">净水机</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">抢2021元券</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">手机</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">冰箱</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">ipad</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">热水器</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">沙发</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">电饭煲</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">电动车</a>
+          </li>
+        </ul>
+      </div>
+      <!-- 搜索框中间主要区 fninsh -->
+
+      <!-- 搜索框右边广告自定义展示区 start -->
+      <div class="SearchRightCustom">
+        <img src="http://kaola-haitao.oss.kaolacdn.com/271c7d10-5167-443a-afe5-9f0729964b5e.png" alt="">
+        <!-- <div class="SearchRightCustomWrap 160">
+          自己定义模块一
+        </div>
+        <div class="SearchRightCustomWrap1">
+          自己定义模块二
+        </div> -->
+      </div>
+      <!-- 搜索框右边广告自定义展示区 finish -->
+    </div>
+  </div>
 
   <!-- navigation_start 头部导航栏开始 -->
   <div class="topNav">
@@ -1481,10 +2016,381 @@
   <!-- searchBox_start 搜索框区域开始 -->
   <div class="searchBox">
     <div class="searchBoxWarp">
+      <!-- 搜索框左边GIFLog区 start -->
+      <div class="searchBoxLeftImgWrap">
+        <img src="https://img.zcool.cn/community/0105cd5aba0e9ba8012062e35de08e.gif" alt=""
+          class="searchLogGif searchLogGif1 showBox">
+        <img src="https://img.zcool.cn/community/019c4a5aba0e9ba8012062e3c041fc.gif" alt=""
+          class="searchLogGif searchLogGif2">
+        <img src="https://img.zcool.cn/community/01a5f75aba0e9ba801218207dcf790.gif" alt=""
+          class="searchLogGif searchLogGif3">
+        <img src="https://img.zcool.cn/community/01ac1f5aba0e9ba801218207269669.gif" alt=""
+          class="searchLogGif searchLogGif4">
+      </div>
+      <!-- 搜索框左边GIFLog区 finish -->
 
+      <!-- 搜索框中间主要区 start -->
+      <div class="searchInputWrap">
+        <ul class="SearchApiWrapUl">
+          <li class="SearchApiWrapLi SearchApiWrapLiB">宝贝</li>
+          <li class="SearchApiWrapLi SearchApiWrapLiW">网易</li>
+          <li class="SearchApiWrapLi SearchApiWrapLiD">店铺</li>
+        </ul>
+        <div class="searchInputMain">
+          <img src="../images/searchLog.png" alt="" class="SearchLeftLog">
+          <input type="text" name="" value="" class="SearchInput" placeholder="请输入想搜索的商品">
+          <img src="https://kaola-haitao.oss.kaolacdn.com/6e4da089-9347-4dc2-be19-4962832a4a5c.png" alt=""
+            class="SearchRightLog">
+        </div>
+        <ul class="SearchLittleListWrapUl">
+          <li class="SearchLittleListWrapLi">
+            <a href="#">净水机</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">抢2021元券</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">手机</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">冰箱</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">ipad</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">热水器</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">沙发</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">电饭煲</a>
+          </li>
+          <span class="SearchCut">|</span>
+          <li class="SearchLittleListWrapLi">
+            <a href="#">电动车</a>
+          </li>
+        </ul>
+      </div>
+      <!-- 搜索框中间主要区 fninsh -->
+
+      <!-- 搜索框右边广告自定义展示区 start -->
+      <div class="SearchRightCustom">
+        <img src="http://kaola-haitao.oss.kaolacdn.com/271c7d10-5167-443a-afe5-9f0729964b5e.png" alt="">
+        <!-- <div class="SearchRightCustomWrap 160">
+          自己定义模块一
+        </div>
+        <div class="SearchRightCustomWrap1">
+          自己定义模块二
+        </div> -->
+      </div>
+      <!-- 搜索框右边广告自定义展示区 finish -->
     </div>
   </div>
   <!-- searchBox_finish 搜索框区域结束 -->
+
+  <!-- search底部的3级菜单数据展示区域 start -->
+  <div class="threeLevelDateShow">
+    <div class="threeLevelDateShowWrap">
+      <div class="FisThreeLevelDateShowWrap">
+        <p class="FisThreeLevelDateShowTittle">
+          <div class="FisThreeLevelDateShowTittleImgWrap">
+            <img src="../images/suningjingling.png" alt="" class="FisThreeLevelDateShowTittleImg">
+          </div>
+          <p class="FisThreeLevelDateShowTittleText">所有分类</p>
+        </p>
+        <ul class="FisThreeLevelDateShowUl">
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9magj32_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9me3j68_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">美容彩妆</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9lmhg85_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ls7k45_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">母婴儿童</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9no5t81_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9nrmp35_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">营养保健</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ogop45_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ojpr14_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">数码家电</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9n9g361_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ndou57_40_40.png" alt="">
+            </div>
+            <p class=" FisThreeLevelDateShowLiText">个护家清</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9peo633_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9pia154_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">服饰鞋靴</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9p5fv45_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9p8db3_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">运动户外</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9o36p76_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9o6e796_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">手表配饰</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9mvrc65_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9msvd91_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">轻奢</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cvslvedr99_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cvslvjhg58_40_40.png" alt="">
+            </div>
+            <p class=" FisThreeLevelDateShowLiText">家居生活</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9or5050_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9oun595_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">环球美食</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <li class="FisThreeLevelDateShowLi">
+            <div class="FisThreeLevelDateShowLiImgWrap">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1e83sugkk85_40_40.png" alt=""
+                class="FisThreeLevelDateShowLiImg">
+              <img src="https://kaola-haitao.oss.kaolacdn.com/1e83stopt52_40_40.png" alt="">
+            </div>
+            <p class="FisThreeLevelDateShowLiText">宠物生活</p>
+            <span class="FisThreeLevelDateShowLiSpan">></span>
+          </li>
+          <!-- 三级数据渲染的BigBox -->
+          <div class="FisThreeLevelDateShowBigBox">
+            <div class="FisThreeLevelDateShowBigBoxWrap">
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+              <div class="FisThreeLevelDateShoppingListBox">
+                <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
+                <ul class="ShoppingListBoxUl">
+                  <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精华</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
+                  <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <ul class="SearchDateShowMidUl">
+        <li class="SearchDateShowMidli"><a href="#">首页</a></li>
+        <li class="SearchDateShowMidli"><a href="#">海外直购</a></li>
+        <li class="SearchDateShowMidli"><a href="#">工厂店</a></li>
+        <li class="SearchDateShowMidli"><a href="#">品质奶粉</a></li>
+        <li class="SearchDateShowMidli"><a href="#">人气面膜</a></li>
+        <li class="SearchDateShowMidli"><a href="#">充值</a></li>
+      </ul>
+      <div class="SecThreeLevelDateShowWrap">
+        <!-- （时间问题）暂未开放 -->
+        <p style="text-align: center; color: grey; margin-top: 8px;">该功能后续开放(敬请期待)</p>
+      </div>
+    </div>
+  </div>
+  <!-- search底部的3级菜单数据展示区域 finish -->
 
 </div>
 <!-- header_finish 公共头部结束 -->
@@ -1752,6 +2658,14 @@
         shoppingCarNavWrapClose()
         return false
       })
+    })
+
+    //屏幕向下走多高的距离，出现searchBox
+    $(window).scroll(function () {
+      $('#searchBoxTopFix').hide()
+      if ($(window).scrollTop() > 320) {
+        $('#searchBoxTopFix').show()
+      }
     })
   })
 

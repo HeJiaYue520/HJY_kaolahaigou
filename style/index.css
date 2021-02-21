@@ -10,3 +10,194 @@ ul {
 a {
   text-decoration: none;
 }
+
+.main {
+  width: 100%;
+}
+
+.mainWarp {
+  width: 1190px;
+  /* min-height: 645px; */
+  margin: 0px auto;
+}
+
+.sixClassifyWrap {
+  width: 1190px;
+  height: 540px;
+  border-top: 1px solid greenyellow;
+  margin: 60px auto 120px;
+}
+
+.sixClassifyTittle {
+  width: 1190px;
+  height: 50px;
+}
+
+.sixClassifyTittleText {
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  text-indent: 2em;
+}
+
+.sixClassifyFindMore {
+  font-size: 18px;
+  font-weight: normal;
+  float: right;
+  margin: 0px 30px;
+  cursor: pointer;
+  color: #090723;
+}
+
+.sixClassifyFindMore:hover {
+  color: #F23D74;
+}
+
+.sixClassifyShowGoodsBigBox {
+  width: 1190px;
+  height: 545px;
+  overflow: hidden;
+}
+
+.sixClassifyShowGoodsBigBox .ItemBox1 {
+  width: 330px;
+  height: 542px;
+  float: left;
+  position: relative;
+  border: 1px solid grey;
+}
+
+.sixClassifyShowGoodsBigBox .ItemBox1 img {
+  float: left;
+}
+
+.sixClassLinkBoxWrap {
+  width: 330px;
+  min-height: 20px;
+  margin: 410px auto;
+  position: absolute;
+}
+
+.sixClassLinkBox {
+  width: 80px;
+  height: 40px;
+  border-radius: 35px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px 13px;
+  cursor: pointer;
+  border: 2px dashed #F23D74;
+}
+
+.sixClassifyShowGoodsBigBox .ItemBox2 {
+  width: 540px;
+  height: 545px;
+  overflow: hidden;
+  float: left;
+}
+
+.fourClassShowGoodsItem {
+  width: 260px;
+  height: 270px;
+  float: left;
+  border: 1px solid gray;
+}
+
+.fourClassShowGoodsItemTittle {
+  margin: 15px 0px;
+  text-align: center;
+}
+
+.fourClassShowGoodsItemLitTittle {
+  margin: 10px 0px 30px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.fourClassShowGoodsItem img {
+  display: block;
+  width: 180px;
+  height: 144px;
+  margin: 0px auto;
+}
+
+.ItemBox3 {
+  width: 307px;
+  height: 540px;
+  float: left;
+  border: 1px solid gray;
+}
+
+.HotShowGoodsTittle {
+  text-align: left;
+  text-indent: 2em;
+  font-size: 18px;
+  font-weight: 700;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid gray;
+}
+
+.HotShowGoodsItemBoxUl {
+  width: 100%;
+}
+
+.HotShowGoodsItemBoxli {
+  padding: 10px;
+  height: 75px;
+  padding: 0px 0px 20px;
+  margin: 20px 0px 20px;
+  border: 1px dashed pink;
+}
+
+.HotShowGoodsItemBoxli img {
+  width: 75px;
+  height: 75px;
+  margin: 10px 10px;
+  float: left;
+  transition: all 0.35s ease-in-out;
+}
+
+.HotShowGoodsItemDetailWrap {
+  width: 150px;
+  height: 60px;
+  float: right;
+  margin: 15px 50px 0px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.HotShowGoodsItemBoxli:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #F23D74;
+}
+
+.HotShowGoodsItemBoxli:hover img {
+  transform: scale(1.02, 1.02);
+}
+
+/*返回顶部*/
+.backToTop{
+  width: 50px;
+  height: 50px;
+	position: fixed;
+  display: none;
+	bottom: 55px;
+	right: 50px;
+}
+
+.iconfanhuidingbu {
+  font-size: 50px;
+  color: #090723;
+  background-color: #F23D74;
+}
+.backToTop:hover{
+	cursor: pointer;
+}
