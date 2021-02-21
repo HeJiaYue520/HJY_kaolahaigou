@@ -503,6 +503,25 @@
     transform: scale(1.05, 1.05);
     transition: all 0.45s ease;
   }
+
+  /*返回顶部*/
+  .backToTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: none;
+    bottom: 55px;
+    right: 50px;
+  }
+
+  .iconfanhuidingbu {
+    font-size: 50px;
+    color: #090723;
+  }
+
+  .backToTop:hover {
+    cursor: pointer;
+  }
 </style>
 
 
@@ -700,8 +719,10 @@
           <ul class="foot_list2_5">
             <li><img src="../images/kaolaFooter001.png" alt=""><a class="addWarning">Global Site</a><span>|</span></li>
             <li><img src="../images/kaolaFooter002.png" alt=""><a class="addWarning">Cait Poccun</a><span>|</span></li>
-            <li><img src="../images/kaolaFooter003.png" alt=""><a class="addWarning">Situs Indonesia</a><span>|</span></li>
-            <li><img src="../images/kaolaFooter004.png" alt=""><a class="addWarning">Sitio de Espana</a><span>|</span></li>
+            <li><img src="../images/kaolaFooter003.png" alt=""><a class="addWarning">Situs Indonesia</a><span>|</span>
+            </li>
+            <li><img src="../images/kaolaFooter004.png" alt=""><a class="addWarning">Sitio de Espana</a><span>|</span>
+            </li>
             <li><img src="../images/kaolaFooter005.png" alt=""><a class="addWarning">wrilsaina"'nu</a><span></span></li>
             <p>考拉旗下网站：<a class="addWarning">考拉钱包</a><span>|</span><a class="addWarning">考拉智联云</a></p>
           </ul>
@@ -727,24 +748,49 @@
 </div>
 <!-- footer_finish 公共footer结束 -->
 
+<!-- 返回顶部部分 Start -->
+<div class="backToTop">
+  <i class="iconfont iconfanhuidingbu">
+    <img src="../images/totop.png" alt="">
+  </i>
+</div>
+<!-- 返回顶部部分 finish -->
+
 
 <!-- footer公共部分Js功能 -->
 <script>
-// 添加点击弹窗警告
-var addWarningFlog = 0
-$('.addWarning').on('click', function () {
-  addWarningFlog ++
-  if (addWarningFlog > 0 && addWarningFlog < 5) {
-    alert('抱歉,该区域功能暂未开放')
-  } else if (addWarningFlog >= 5 && addWarningFlog < 10) {
-    alert('抱歉，别点了，footer部分功能暂未开放')
-  } else if (addWarningFlog >= 10 && addWarningFlog < 15) {
-    alert('都说了footer功能暂时没写，瓜皮。')
-  }else if (addWarningFlog >= 15 && addWarningFlog < 20) {
-    alert('真的抱歉，别点了，真没写')
-  }else if (addWarningFlog >= 20 ) {
-    alert('能点20多次警告你也是个人才')
-    addWarningFlog = 0
-  }
-})
+  // 添加点击弹窗警告
+  var addWarningFlog = 0
+  $('.addWarning').on('click', function () {
+    addWarningFlog++
+    if (addWarningFlog > 0 && addWarningFlog < 5) {
+      alert('抱歉,该区域功能暂未开放')
+    } else if (addWarningFlog >= 5 && addWarningFlog < 10) {
+      alert('抱歉，别点了，footer部分功能暂未开放')
+    } else if (addWarningFlog >= 10 && addWarningFlog < 15) {
+      alert('都说了footer功能暂时没写，瓜皮。')
+    } else if (addWarningFlog >= 15 && addWarningFlog < 20) {
+      alert('真的抱歉，别点了，真没写')
+    } else if (addWarningFlog >= 20) {
+      alert('能点20多次警告你也是个人才')
+      addWarningFlog = 0
+    }
+  })
+
+  $(function () {
+    // 当页面向下滑动 600px 出现"返回顶部" 按钮
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 600) {
+        $('.backToTop').css('display', 'block');
+      } else {
+        $('.backToTop').css('display', 'none');
+      }
+    });
+    // 点击按钮，返回页面顶部
+    $(".backToTop").on("click", function () {
+      $("html").animate({
+        scrollTop: 0
+      }, 1000)
+    })
+  });
 </script>

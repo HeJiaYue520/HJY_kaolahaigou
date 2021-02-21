@@ -1,0 +1,254 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+h1 {
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+  color: rgb(224, 40, 40);
+}
+
+.mian {
+  width: 1200px;
+  height: 100%;
+  margin: 30px auto;
+  /* background-color: bisque; */
+}
+
+.items {
+  width: 1100px;
+  margin: 0px auto;
+  /* background-color: chartreuse; */
+}
+
+.top {
+  width: 1100px;
+  height: 60px;
+  overflow: hidden;
+  /* background-color: chocolate; */
+}
+
+.all:hover {
+  cursor: pointer;
+}
+
+.top p {
+  width: 170px;
+  margin: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgb(255, 168, 168);
+  border: 1px solid rgb(255, 168, 168);
+  background-color: rgb(190, 213, 255);
+}
+
+.top p:nth-of-type(1) {
+  width: 80px;
+}
+
+.top p:nth-of-type(6) {
+  width: 80px;
+}
+
+.top p:nth-of-type(2) {
+  width: 350px;
+}
+
+.goods_List {
+  width: 1100px;
+  /* background-color: rgb(185, 166, 152); */
+}
+
+.lis_ul {
+  width: 1100px;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  /* background-color: rgb(221, 221, 221); */
+}
+
+.good_massage {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* background-color: rgb(0, 255, 255); */
+  background-color: rgb(224, 224, 224);
+}
+
+.good_massage .Shoopinginput{
+  width: 170px;
+  margin: 5px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  border: 1px solid black;
+  /* background-color: cornflowerblue; */
+}
+
+.img_mask {
+  width: 170px;
+  height: 100px;
+  overflow: hidden;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  border: 1px solid black;
+}
+
+.img_mask .shoppingImg {
+  width: 170px;
+  height: 100px;
+  float: left;
+}
+
+.good_massage p {
+  width: 170px;
+  margin: 5px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  border: 1px solid black;
+  /* background-color: cornflowerblue; */
+}
+
+.good_massage .goodscar_tex {
+  font-size: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.goodscar_price,
+.sum {
+  font-size: 25px;
+  line-height: 100px;
+}
+
+.good_massage .checks {
+  width: 20px;
+  height: 20px;
+  margin: 50px 36px;
+  cursor: pointer;
+}
+
+.good_massage .del {
+  margin: 20px;
+  height: 20px;
+  margin: 50px 30px;
+  cursor: pointer;
+}
+
+.minus {
+  width: 30px;
+  height: 30px;
+  border-radius: 35px;
+  line-height: 30px;
+  margin: 35px 0px 0px 20px;
+  font-size: 25px;
+  float: left;
+  cursor: pointer;
+  background-color: rgb(104, 255, 179);
+}
+
+.minus:hover {
+  color: aliceblue;
+  box-shadow: 2px 2px 5px rgb(255, 92, 124);
+  background-color: rgb(255, 57, 96);
+}
+
+.goods_number {
+  line-height: 100px;
+  font-size: 25px;
+}
+
+.add {
+  width: 30px;
+  height: 30px;
+  border-radius: 35px;
+  line-height: 30px;
+  margin: 35px 20px 0px 0px;
+  font-size: 25px;
+  float: right;
+  cursor: pointer;
+  background-color: rgb(104, 255, 179);
+}
+
+.add:hover {
+  color: aliceblue;
+  box-shadow: 2px 2px 5px rgb(255, 92, 124);
+  background-color: rgb(255, 57, 96);
+}
+
+.foot_wrap {
+  width: 1100px;
+}
+
+.foot {
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+}
+
+.foot p {
+  height: 80px;
+  font-size: 15px;
+  line-height: 80px;
+  width: 170px;
+  margin: 5px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.foot p:nth-of-type(4) {
+  font-size: 10px;
+}
+
+.foot button {
+  cursor: pointer;
+  width: 170px;
+  height: 80px;
+  border-radius: 30px;
+  outline-style: none;
+  border: none;
+  background-color: transparent;
+}
+
+.foot span {
+  height: 20px;
+  line-height: 20px;
+  padding: 5px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+}
+
+.check1 {
+  cursor: pointer;
+}

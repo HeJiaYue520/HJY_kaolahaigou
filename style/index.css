@@ -183,21 +183,4 @@ a {
   transform: scale(1.02, 1.02);
 }
 
-/*返回顶部*/
-.backToTop{
-  width: 50px;
-  height: 50px;
-	position: fixed;
-  display: none;
-	bottom: 55px;
-	right: 50px;
-}
 
-.iconfanhuidingbu {
-  font-size: 50px;
-  color: #090723;
-  background-color: #F23D74;
-}
-.backToTop:hover{
-	cursor: pointer;
-}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <link rel="stylesheet" href="../style/goodsList.css">
+</head>
+<body>
+  <!-- 头部公共部分 start -->
+  <div class="header"></div>
+  <!-- 头部公共部分 finish -->
+
+
+  <!-- banner公共部分 start -->
+  <div class="banner"></div>
+  <!-- banner公共部分 finish -->
+
+  <div class="warp">
+    <button class="btn">请求数据</button>
+    <p class="shopping">
+      购物车
+      <a class="count" href="../views/shoppingCar.html"></a>
+    </p>
+    <div class="main">
+      <div class="mask">
+        <!-- <div class="template">
+          <div class="img_mask">
+            <img src="https://img13.360buyimg.com/n7/jfs/t1/149503/4/10174/275245/5f7fcc2aE53c42ad9/3c1063e49844b01b.jpg" alt="">
+            <p class="tex">俏薇妮 睡衣女秋冬季情侣睡衣睡袍珊瑚绒加绒加厚法兰绒毛茸茸羊羔绒宽松保暖家</p>
+          </div>           
+          <p class="price">￥398.00</p>
+          <span class="add">加入购物车</span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 尾部公共部分 start-->
+  <div class="footer"></div>
+  <!-- 尾部公共部分 finish-->
+  
+
+  <!-- 最外层 finish -->
+  <script src="../script/jquery-1.8.3.js"></script>
+  <script src="../script/utils.js"></script>
+  <script src="../script/goodslist.js"></script>
+  <!-- JqAjax_start(请求公共头部尾部文件)-->
+  <script>
+    $('.header').load('./header.html')
+    // $('.banner').load('./banner.html')
+    $('.footer').load('./footer.html')
+  </script>
+  <!-- JqAjax_finish(请求公共头部尾部文件)-->
+</body>
+
+</html>

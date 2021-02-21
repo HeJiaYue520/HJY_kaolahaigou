@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的购物车</title>
+  <link rel="stylesheet" href="../style/shoopingCar.css">
+</head>
+<body>
+
+  <!-- 头部公共部分 start -->
+  <div class="header"></div>
+  <!-- 头部公共部分 finish -->
+
+
+  <div class="wrap">
+    <h1>我的购物车</h1>
+    <div class="mian">
+      <div class="items">
+        <div class="top">
+          <p>全选：<input type="checkbox" class="firstAll Shoopinginput" checked></p>
+          <p>商品</p>
+          <p>单价</p>
+          <p>数量</p>
+          <p>小计</p>
+          <p>操作</p>
+        </div>
+        <div class="goods_List">
+          <ul class="lis_ul">
+            <!-- <li class="good_massage">
+              <input type="checkbox" class="checks Shoopinginput" checked>
+              <div class="img_mask">
+              <img src="https://img13.360buyimg.com/n7/jfs/t1/149503/4/10174/275245/5f7fcc2aE53c42ad9/3c1063e49844b01b.jpg" alt="" class="shoppingImg">
+              </div>
+              <p class="goodscar_tex">俏薇妮 睡衣女秋冬季情侣睡衣睡袍珊瑚绒加绒加厚法兰绒毛茸茸羊羔绒宽松保暖家</p>
+              <p class="goodscar_price">￥119.00</p>
+              <p class="calculate">
+                <span class="minus">-</span>
+                <span class="goods_number">100</span>
+                <span class="add">+</span>
+              </p>
+              <p class="sum">￥119.00</p>
+              <button value="" class="del">删除</button>
+            </li> -->
+          </ul>
+        </div>
+        <div class="foot_wrap">
+          <!-- <div class="foot">
+            <p>全选：<input type="checkbox" id="lastAll Shoopinginput" checked></p>
+            <p><button class="btn_del">删除选中商品</button></p>
+            <p>已选中<span class="goods_numb">9999</span>件商品</p>
+            <p>总价格:<span class="goods_numb">￥119000.00</span>元</p>
+            <p><button class="btn_sum">结算选中商品</button></p>
+          </div> -->
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- 尾部公共部分 start-->
+  <div class="footer"></div>
+  <!-- 尾部公共部分 finish-->
+  
+
+  <!-- 最外层 finish -->
+  <script src="../script/jquery-1.8.3.js"></script>
+  <script src="../script/utils.js"></script>
+  <script src="../script/shoppingCar.js"></script>
+  <!-- JqAjax_start(请求公共头部尾部文件)-->
+  <script>
+    $('.header').load('./header.html')
+    // $('.banner').load('./banner.html')
+    $('.footer').load('./footer.html')
+  </script>
+  <!-- JqAjax_finish(请求公共头部尾部文件)-->
+</body>
+</html>
