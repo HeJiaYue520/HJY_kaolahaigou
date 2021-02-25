@@ -17,627 +17,1318 @@
     text-decoration: none;
   }
 
-  .bannerWarp {
+  .Banner {
     width: 100%;
-    height: 528px;
-    position: relative;
-    overflow: hidden;
+    height: 490px;
+    margin: -2px 0px 20px;
+    background: linear-gradient(135deg, #ffcef5 0%, #ff3668 100%);
+    /* background: linear-gradient(135deg, #AC0E0F 0%, #ff3265 100%); */
+    /* background: linear-gradient(135deg, #D7AF96 0%, #ff3265 100%); */
+    /* background: linear-gradient(135deg, #E3C6BD 0%, #ff3265 100%); */
     border-bottom: 1px solid grey;
   }
 
-  .bannerBgImg {
-    width: 1920px;
-    height: 528px;
-    margin: 0px auto;
-  }
-
-  .bannerShowImg {
-    width: 1920px;
-    height: 528px;
-    margin: 0px auto;
-  }
-
-  .bannerShade {
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    top: 528px;
-    z-index: 20px;
-    bottom: 0px;
-    background-color: #090723b8;
-  }
-
-  .bannerShadeWrap {
+  .BannerWarp {
     width: 1190px;
-    height: 45px;
-    margin: 0px auto;
-  }
-
-  .bannerShadeLeftWrap {
-    height: 45px;
-    float: left;
-  }
-
-  .bannerShadeLeftWrap li {
-    width: 120px;
-    margin: 0px 7px;
-    float: left;
-  }
-
-  .bannerShadeLeftWrap li:nth-of-type(1) img {
-    float: left;
-    width: 40px;
-  }
-
-  .bannerShadeLeftWrap li:nth-of-type(2) img {
-    float: left;
-    width: 34px;
-    margin: 5px 7px 0px 0px;
-  }
-
-  .bannerShadeLeftWrap li:nth-of-type(3) img {
-    float: left;
-    width: 45px;
-  }
-
-  .bannerShadeLeftWrap li:nth-of-type(4) img {
-    float: left;
-    width: 40px;
-    margin: 3px 3px 0px 0px;
-  }
-
-  .bannerShadeLeftWrap li a {
-    height: 45px;
-    line-height: 45px;
-    color: white;
-  }
-
-  .bannerShadeLeftWrap li a:hover {
-    text-decoration: underline;
-  }
-
-  .bannerShaderightWrap {
-    float: right;
-  }
-
-  .bannerShaderightWrap img {
-    float: left;
-    width: 25px;
-    margin: 10px 10px 0px 0px;
-  }
-
-  .bannerShaderightWrap li a {
-    height: 45px;
-    line-height: 45px;
-    color: white;
-  }
-
-  .bannerShaderightWrap li a:hover {
-    text-decoration: underline;
-  }
-
-  .FisThreeLevelDateShowUl1 {
-    width: 226px;
-    position: absolute;
-    z-index: 50;
+    height: 490px;
+    margin: 0px auto 0px;
     position: relative;
-    z-index: 10;
-    left: 50%;
-    margin-left: -602px;
-    top: -534px;
-    border: 2px solid black;
   }
 
-  .FisThreeLevelDateShowUl1:hover .FisThreeLevelDateShowBigBox {
-    display: block;
+  .preventSubsideWrap {
+    width: 1500px;
   }
 
-  .FisThreeLevelDateShowLi {
-    width: 222px;
-    min-height: 36px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    border-bottom: 2px dashed grey;
-    background: linear-gradient(90deg, red, #ff3264);
-  }
-
-  .FisThreeLevelDateShowLi:hover {
-    background: white;
-  }
-
-  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiText {
-    color: red;
-  }
-
-  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiSpan {
-    color: red;
-  }
-
-  .FisThreeLevelDateShowLi:hover .FisThreeLevelDateShowLiImgWrap .FisThreeLevelDateShowLiImg {
-    display: none;
-  }
-
-  .FisThreeLevelDateShowLiImgWrap {
-    width: 20px;
-    height: 20px;
+  .BannerLeft {
+    width: 224px;
+    height: 478px;
+    margin: 5px 0px;
     float: left;
-    overflow: hidden;
-    margin: 10px 0px 0px 25px;
+    border-radius: 25px;
+    border: 1px dashed grey;
   }
 
-  .FisThreeLevelDateShowLiImgWrap img {
-    width: 20px;
+  .BannerLeFtrecentlyHotSaleTittle {
+    width: 100%;
+    height: 35px;
   }
 
-  .FisThreeLevelDateShowLiText {
-    height: 20px;
-    line-height: 20px;
-    margin: 10px 0px;
-    text-align: left;
-    text-indent: 37px;
-    color: white;
+  .BannerLeFtrecentlyHotSaleTittle span {
+    padding: 0px 17px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 700;
   }
 
-  .FisThreeLevelDateShowLiSpan {
-    font-size: 20px;
+  .indicatePointUl {
+    margin: 10px 15px;
     float: right;
-    margin: -34px 20px 0px 0px;
-    color: white;
   }
 
-  .FisThreeLevelDateShowLi:nth-of-type(12) {
-    border-bottom: 2px dashed transparent;
+  .indicatePointLi {
+    width: 7px;
+    height: 7px;
+    float: left;
+    margin: 5px 5px 0px 0px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    background-color: grey;
   }
 
-  /* 三级数据渲染的大盒子 */
-  .FisThreeLevelDateShowBigBox {
-    width: 958px;
-    height: 528px;
-    overflow-x: hidden;
+  .BannerLeFtrecentlyHotSaleMerchantShow {
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .BannerLeFtrecentlyHotSaleMerchantWrap {
+    width: 200px;
+    margin: 0px 10px;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .BannerLeFtrecentlyHotSaleMerchant {
+    width: 200px;
+    height: 80px;
+    margin: 6px auto 0px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid transparent;
+  }
+
+  .BannerLeFtrecentlyHotSaleMerchant:hover {
+    border: 1px solid orangered;
+  }
+
+  .BannerLeFtrecentlyHotSaleMerchant img {
+    width: 170px;
+    height: 50px;
+    display: block;
+    margin: 5px auto;
+  }
+
+  .BannerLeFtrecentlyHotSaleMerchant p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  /* Banner中间部分样式 */
+  .BannerMidBody {
+    width: 700px;
+    height: 490px;
+    margin: 0px 12px;
+    float: left;
+  }
+
+  /* 轮播显示盒子 */
+  .BannerBigMidLunboWrap {
+    width: 700px;
+    height: 245px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 内容盒子 */
+  .BannerBigMidLunboImgWrap {
+    width: 698px;
+    padding: 0px 0px 10px;
+    margin: 5px auto;
+  }
+
+  .BannerBigMidLunboImgShow {
+    width: 486px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .BannerBigMidLunboimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .BannerBigMidLunboimg ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .BannerBigMidLunboimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  .BannerBigMidLunImgBoxLeft {
+    left: -180px;
+    z-index: 4;
+    border-radius: 15px;
+    transform: scale(0.7, 0.8);
+    transition: all 0.5s ease;
+    background: rgb(0, 0, 0);
+  }
+
+  .BannerBigMidLunImgBoxCenter {
+    z-index: 6;
+    left: 0;
+    top: 0;
+    bottom: 10%;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+  }
+
+  .BannerBigMidLunImgBoxRight {
+    left: 180px;
+    z-index: 4;
+    border-radius: 15px;
+    transform: scale(0.7, 0.8);
+    background: rgb(0, 0, 0);
+    transition: all 0.5s ease;
+  }
+
+  .BannerBigMidLunImgBoxLeft div,
+  .BannerBigMidLunImgBoxRight div {
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .BannerBigMidLunImgBox1,
+  .BannerBigMidLunImgBox2,
+  .BannerBigMidLunImgBox3 {
+    z-index: 3;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  .BannerBigMidLunboLast,
+  .BannerBigMidLunboNext {
     position: absolute;
     z-index: 10;
-    display: none;
-    top: -2px;
-    left: 226px;
-    border: 2px solid black;
-    background-color: white;
-  }
-
-  /* 设置滚动条样式 */
-  .FisThreeLevelDateShowBigBox::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  .FisThreeLevelDateShowBigBox::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .FisThreeLevelDateShowBigBox::-webkit-scrollbar-track {
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  .FisThreeLevelDateShowBigBoxWrap {
-    width: 100%;
-    min-height: 800px;
-  }
-
-  /* 鼠标悬停渲染相对应的数据 */
-  .FisThreeLevelDateShoppingListBox {
-    width: 290px;
-    min-height: 250px;
-    margin: 10px 0px 0px 14px;
-    float: left;
-    border-radius: 15px;
-    border: 3px dashed pink;
-    background-color: linen;
-  }
-
-  .ShoppingListBoxTittle {
-    height: 30px;
-    line-height: 30px;
+    width: 20px;
+    height: 50px;
     text-align: center;
-    border: 1px solid transparent;
+    line-height: 50px;
+    cursor: pointer;
+    top: 40%;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #090723c3;
+    display: none;
+  }
+
+  .BannerMidLunboListList {
+    width: 30%;
+    height: 5px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .BannerMidLunboListBtn {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    flex: 1;
+    background: rgb(170, 170, 170);
+  }
+
+  .BannerMidLunboListBtn:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .BannerBigMidLunboLast {
+    left: -108px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .BannerBigMidLunboNext {
+    right: -108px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  /* banner 中间选项卡部分 */
+  .BannerBottomRightControl {
+    width: 698px;
+    height: 230px;
+    margin: -20px auto 0px;
+    padding: 5px 0px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .BannerBottomRightControlTittleUl {
+    width: 680px;
+    height: 30px;
+    padding: 0px 0px 7px;
+    margin: 5px auto;
     border-bottom: 1px dashed grey;
   }
 
-  .ShoppingListBoxTittle a {
-    font-size: 16px;
-    font-weight: 600;
-    color: #090723;
+  .ControlTittle {
+    width: 100px;
+    line-height: 30px;
+    float: left;
+    margin: 0px 0px 0px 10px;
   }
 
-  .ShoppingListBoxTittle a:hover {
-    color: red;
+  .BannerBottomRightControlLi {
+    float: right;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 7px 15px 0px 0px;
+  }
+
+  .BannerBottomRightControlLi:hover {
+    color: white;
     text-decoration: underline;
   }
 
-  .ShoppingListBoxUl {
-    background-color: #FF336E;
+  .BannerBottomRightControlItemUl {
+    width: 680px;
+    height: 200px;
+    margin: 0px auto;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
   }
 
-  .ShoppingListBoxli {
+  .BannerBottomRightControlBigItem {
+    width: 120px;
+    height: 190px;
+    margin: 0px 7px;
+    float: left;
+    cursor: pointer;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 1px solid transparent;
+  }
+
+  .BannerBottomRightControlBigItem img {
     width: 100px;
+    height: 100px;
+    display: block;
+    margin: 10px auto 5px;
+    border-radius: 10px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .BannerBottomRightControlBigItem:hover img {
+    transform: scale(1.08);
+  }
+
+  .BannerBottomRightControlBigItem .text {
+    width: 100px;
+    margin: 10px auto;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .BannerBottomRightControlBigItem .text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .BannerBottomRightControlBigItem .price {
+    width: 100px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 30px;
+    margin: 5px auto 0px;
+    color: white;
+    background: linear-gradient(135deg, #ff3265 0%, #AC0E0F 50%);
+  }
+
+  .ControlLiShowBox {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .ItemUlShowBox {
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1.05);
+  }
+
+  /* Banner右边部分样式 */
+  .BannerRight {
+    width: 240px;
+    height: 480px;
+    margin: 5px 0px;
+    border-radius: 30px;
+    float: left;
+    overflow: hidden;
+    border: 1px dashed grey;
+  }
+
+  .BannerLogin {
+    width: 240px;
+    height: 75px;
+    margin: 10px 0px 0px;
+    /* background-color: yellowgreen; */
+  }
+
+  .BannerLoginWrap {
+    width: 240px;
+    height: 70px;
+  }
+
+  .BannerLoginWrap img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+    border: 3px double grey;
+  }
+
+  .BannerLoginWrap i {
+    width: 165px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 13px 0px 0px;
+    color: #39006F;
+  }
+
+  .BannerLoginWrap p {
+    width: 1200px;
     height: 30px;
     line-height: 30px;
-    border: 1px solid transparent;
-    float: left;
+    font-size: 14px;
+    margin: -2px 0px 0px;
   }
 
-  .ShoppingListBoxli a {
-    padding: 2px 3px;
-    margin: 5px 7px;
-    border-radius: 5px;
-    color: #090723;
+  .BannerLoginWrap p a {
+    color: black;
+    padding: 0px 5px;
   }
 
-  .ShoppingListBoxli a:hover {
+  .BannerLoginWrap p a:hover {
     color: white;
-    background-color: lightskyblue;
+    text-decoration: underline;
   }
 
-  /* 三级数据展示中间的文字样式 */
-  .SearchDateShowMidUl {
-    width: 700px;
-    height: 37px;
-    /* 后续加入照片悬浮效果用的上 */
-    /* overflow: hidden; */
+  .BannerLoginWrap1 {
+    display: none;
+  }
+
+  /* 新品首发轮播图 */
+  .BannernewItemsShowLunboWrap {
+    height: 245px;
     position: relative;
-    z-index: 10;
-    margin: 0px 13px;
-    float: left;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border: 2px solid black;
-    background-color: #CCCCCC;
+    overflow: hidden;
   }
 
-  .SearchDateShowMidli {
-    width: 80px;
+  /* 内容盒子 */
+  .BannernewItemsLunboImgWrap {
+    width: 240px;
+    height: 240px;
+    padding: 0px 0px 10px;
+    margin: 0px auto;
+  }
+
+  .BannernewItemsLunboImgShow {
+    width: 240px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .BannernewItemsLunboimg {
+    width: 150px;
+    height: 160px;
+    margin: 0px auto;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .BannernewItemsLunboimg h3 {
     text-align: center;
-    height: 40px;
-    line-height: 40px;
-    margin: 0px 10px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .BannernewItemsLunboimg ul li {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin: 30px auto 0px;
+    cursor: pointer;
+  }
+
+  .BannernewItemsLunboimg img {
+    width: 150px;
+    height: 170px;
+    border-radius: 10px;
+  }
+
+  .BannernewItemsLunImgBoxLeft {
+    left: -320px;
+    top: 15px;
+    z-index: 4;
+    opacity: 0.85;
+    transform: scale(0.8, 0.8);
+    transition: all 0.5s ease;
+  }
+
+  .BannernewItemsLunImgBoxCenter {
+    z-index: 6;
+    left: 0;
+    top: 0;
+    bottom: 10%;
+    transition: all 0.5s ease;
+  }
+
+  .BannernewItemsLunImgBoxRight {
+    left: 328px;
+    top: 15px;
+    z-index: 4;
+    opacity: 0.85;
+    transform: scale(0.7, 0.8);
+    transition: all 0.5s ease;
+  }
+
+  .BannernewItemsLunImgBoxLeft div,
+  .BannernewItemsLunImgBoxRight div {
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+  }
+
+  .BannernewItemsLunImgBox1,
+  .BannernewItemsLunImgBox2,
+  .BannernewItemsLunImgBox3 {
+    z-index: 3;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  .BannernewItemsLunboLast,
+  .BannernewItemsLunboNext {
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    top: 50%;
+    color: white;
+    background-color: #090723aa;
+    display: none;
+  }
+
+  .BannernewItemsLunboListList {
+    width: 50%;
+    height: 10px;
+    display: flex;
+    margin: 0 auto;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #ffcef5aa;
+  }
+
+  .BannernewItemsLunboListBtn {
+    width: 50px;
+    height: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    flex: 1;
+    background: rgba(170, 170, 170, 0.5);
+  }
+
+  .BannernewItemsLunboListBtn:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  .BannernewItemsLunboLast {
+    left: -45px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .BannernewItemsLunboNext {
+    right: -45px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .consulting {
+    width: 230px;
+    height: 150px;
+    margin: 0px auto;
+  }
+
+  .consultingWrap {
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+
+  .consultingWrap p {
+    width: 220px;
+    padding: 0px 7px;
+  }
+
+  .consultingWrap h2 {
+    width: 220px;
+    padding: 0px 7px;
     float: left;
   }
 
-  .SearchDateShowMidli a {
-    font-size: 16px;
-    font-weight: 600;
+  .consultingWrap span {
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    margin: -25px 10px 5px;
+    cursor: pointer;
+  }
+
+  .consultingWrap span:hover {
+    color: #ffcef5;
+  }
+
+  .consultingTitle {
+    width: 220px;
+    margin: 0px auto;
+  }
+
+  .consultingText {
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin: 7px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .consultingText span {
+    float: left;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0px 7px 0px 0px;
+    color: blanchedalmond;
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  .consultingText a {
+    height: 20px;
+    line-height: 20px;
     color: black;
   }
 
-  .SearchDateShowMidli a:hover {
-    color: #FF336E;
+  .consultingText a:hover {
+    color: #ffcef5;
+    text-decoration: underline;
   }
 
+  .ShowHotSaleMerchantBox {
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.7s ease-in-out;
+  }
 
-  /* 第二个三级菜单数据展示样式 */
-  .SecThreeLevelDateShowWrap {
-    width: 226px;
-    height: 37px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    position: relative;
-    float: right;
-    border: 2px solid black;
-    background: linear-gradient(90deg, #ff9000, #ff5000);
+  .ShowPoint {
+    background-color: aquamarine;
+    transform: scale(1.2, 1.2);
   }
 </style>
 
 
 <!-- banner公共部分Html结构 -->
-<!-- header_start 公共banner开始 -->
-<div class="bannerWarp">
-  <div class="bannerBgImg">
-    <img
-      src="//kaola-haitao.oss.kaolacdn.com/4bd5fac4-8a0e-432e-b834-1d89e761aa8dT21020101634_1920_506.jpg?x-oss-process=image/resize,w_1920/quality,q_90"
-      alt="" class="bannerShowImg">
-      <ul class="FisThreeLevelDateShowUl1">
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9magj32_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9me3j68_40_40.png" alt="">
+<!-- banner_start 公共banner开始 -->
+<div class="Banner">
+  <div class="BannerWarp">
+    <div class="preventSubsideWrap">
+      <!-- Banner 左侧轮播 start -->
+      <div class="BannerLeft">
+        <div class="BannerLeftWrap">
+          <div class="BannerLeFtrecentlyHotSaleTittle">
+            <span>驻站商铺</span>
+            <ul class="indicatePointUl">
+              <li class="indicatePointLi ShowPoint"></li>
+              <li class="indicatePointLi"></li>
+              <li class="indicatePointLi"></li>
+            </ul>
           </div>
-          <p class="FisThreeLevelDateShowLiText">美容彩妆</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9lmhg85_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ls7k45_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">母婴儿童</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9no5t81_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9nrmp35_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">营养保健</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ogop45_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ojpr14_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">数码家电</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9n9g361_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9ndou57_40_40.png" alt="">
-          </div>
-          <p class=" FisThreeLevelDateShowLiText">个护家清</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9peo633_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9pia154_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">服饰鞋靴</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9p5fv45_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9p8db3_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">运动户外</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9o36p76_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9o6e796_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">手表配饰</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9mvrc65_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9msvd91_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">轻奢</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cvslvedr99_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cvslvjhg58_40_40.png" alt="">
-          </div>
-          <p class=" FisThreeLevelDateShowLiText">家居生活</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9or5050_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1cet9oun595_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">环球美食</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <li class="FisThreeLevelDateShowLi">
-          <div class="FisThreeLevelDateShowLiImgWrap">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1e83sugkk85_40_40.png" alt=""
-              class="FisThreeLevelDateShowLiImg">
-            <img src="https://kaola-haitao.oss.kaolacdn.com/1e83stopt52_40_40.png" alt="">
-          </div>
-          <p class="FisThreeLevelDateShowLiText">宠物生活</p>
-          <span class="FisThreeLevelDateShowLiSpan">></span>
-        </li>
-        <!-- 三级数据渲染的BigBox -->
-        <div class="FisThreeLevelDateShowBigBox">
-          <div class="FisThreeLevelDateShowBigBoxWrap">
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
-            <div class="FisThreeLevelDateShoppingListBox">
-              <p class="ShoppingListBoxTittle"><a href="#">护肤</a></p>
-              <ul class="ShoppingListBoxUl">
-                <li class="ShoppingListBoxli"><a href="#">洁面</a></li>
-                <li class="ShoppingListBoxli"><a href="#">卸妆</a></li>
-                <li class="ShoppingListBoxli"><a href="#">爽肤水</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面霜</a></li>
-                <li class="ShoppingListBoxli"><a href="#">眼部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精华</a></li>
-                <li class="ShoppingListBoxli"><a href="#">乳液/凝胶</a></li>
-                <li class="ShoppingListBoxli"><a href="#">唇部护理</a></li>
-                <li class="ShoppingListBoxli"><a href="#">精油芳疗</a></li>
-                <li class="ShoppingListBoxli"><a href="#">面部护肤</a></li>
-                <li class="ShoppingListBoxli"><a href="#">防晒修复</a></li>
-                <li class="ShoppingListBoxli"><a href="#">男士护肤</a></li>
-              </ul>
-            </div>
+          <div class="BannerLeFtrecentlyHotSaleMerchantShow">
+            <ul
+              class="BannerLeFtrecentlyHotSaleMerchantWrap BannerLeFtrecentlyHotSaleMerchantWrap1 ShowHotSaleMerchantBox">
+            </ul>
+            <ul class="BannerLeFtrecentlyHotSaleMerchantWrap BannerLeFtrecentlyHotSaleMerchantWrap2"></ul>
+            <ul class="BannerLeFtrecentlyHotSaleMerchantWrap BannerLeFtrecentlyHotSaleMerchantWrap3"></ul>
           </div>
         </div>
-      </ul>
+      </div>
+      <!-- Banner 左侧轮播 finish -->
 
-    <div class="bannerShade">
-      <div class="bannerShadeWrap">
-        <ul class="bannerShadeLeftWrap">
-          <li>
-            <img src="../images/Banner_ziying.png" alt="">
-            <a href="#">考拉自营</a>
-          </li>
-          <li>
-            <img src="../images/Banner_quanqiu.png" alt="">
-            <a href="#">全球直采</a>
-          </li>
-          <li>
-            <img src="../images/Banner_zhengping.png" alt="">
-            <a href="#">假一赔十</a>
-          </li>
-          <li>
-            <img src="../images/Banner_shouhou.png" alt="">
-            <a href="#">售后无忧</a>
-          </li>
-        </ul>
-        <div class="bannerShaderightWrap">
-          <li>
-            <img src="https://kaola-haitao.oss.kaolacdn.com/13ea56c1-0902-4c4e-8363-b319e90a160e.png" alt="">
-            <a href="#">新用户下载APP，领100元无门槛卷</a>
-          </li>
+      <!-- Banner 中间轮播图部分 start -->
+      <div class="BannerMidBody">
+        <div class="BannerMidBodyWrap">
+          <!-- Banner中上大图运动轮播 start -->
+          <div class="BannerBigMidLunbo">
+            <!-- 轮播显示盒子 -->
+            <div class="BannerBigMidLunboWrap">
+              <!-- 内容盒子 -->
+              <div class="BannerBigMidLunboImgWrap">
+                <div class="BannerBigMidLunboImgShow">
+                  <div class="BannerBigMidLunboimg">
+                    <i class="iconfont iconarrow- BannerBigMidLunboLast"></i>
+                    <ul id="BannerBigMidLunboUl">
+                      <li class="BannerBigMidLunImgBoxLeft"><img
+                          src="//oss.suning.com/aps/aps_learning/iwogh/2021/02/20/11/iwoghBannerPicture/7da42fcc0db64969801b3cc4ecb44ba6.png"
+                          alt="">
+                        <div></div>
+                      </li>
+                      <li class="BannerBigMidLunImgBoxCenter"><img
+                          src="https://oss.suning.com/adpp/creative_kit/material/picture/20210223-c66475fc737b4cf3bfca526fd52207247098476062174e42.jpg"
+                          alt="">
+                        <div></div>
+                      </li>
+                      <li class="BannerBigMidLunImgBoxRight"><img
+                          src="//oss.suning.com/aps/aps_learning/iwogh/2021/02/20/16/iwoghBannerPicture/c701d21eacae4408b0cd422bec511b66.png"
+                          alt="">
+                        <div></div>
+                      </li>
+                      <li class="BannerBigMidLunImgBox1"><img
+                          src="//oss.suning.com/aps/aps_learning/iwogh/2021/02/20/11/iwoghBannerPicture/d0404a4e9f2a4c2ea98519a5b6dca8f7.png"
+                          alt="">
+                        <div></div>
+                      </li>
+                      <li class="BannerBigMidLunImgBox2"><img
+                          src="//oss.suning.com/aps/aps_learning/iwogh/2021/02/23/17/iwoghBannerPicture/f9ee1952ff6e4e03bc409a8411be4087.png"
+                          alt="">
+                        <div></div>
+                      </li>
+                      <li class="BannerBigMidLunImgBox3"><img
+                          src="https://oss.suning.com/adpp/creative_kit/material/picture/20210223-be4394716bf94be5a52c856bb7e2c5b1c4706730cb4547aa.jpg"
+                          alt="">
+                        <div></div>
+                      </li>
+                    </ul>
+                    <i class="iconfont iconfx6-right BannerBigMidLunboNext"></i>
+                  </div>
+                </div>
+                <div class="BannerMidLunboListList">
+                  <span class="BannerMidLunboListBtn"></span>
+                  <span class="BannerMidLunboListBtn" style="background: red;"></span>
+                  <span class="BannerMidLunboListBtn"></span>
+                  <span class="BannerMidLunboListBtn"></span>
+                  <span class="BannerMidLunboListBtn"></span>
+                  <span class="BannerMidLunboListBtn"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Banner中上大图运动轮播 finish -->
+
+          <!-- Banner中下选项卡，每日特价 start -->
+          <div class="BannerBottomRightControl">
+            <div class="BannerBottomRightControlWrap">
+              <ul class="BannerBottomRightControlTittleUl">
+                <h3 class="ControlTittle">每日特价</h3>
+                <li class="BannerBottomRightControlLi ">个护</li>
+                <li class="BannerBottomRightControlLi">精选</li>
+                <li class="BannerBottomRightControlLi">美食</li>
+                <li class="BannerBottomRightControlLi ControlLiShowBox">百货</li>
+              </ul>
+              <ul class="BannerBottomRightControlItemUl ">
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img20.360buyimg.com/seckillcms/s144x144_jfs/t1/163967/11/5654/63505/601bb700Ed2c6bf86/fb7b4242812d9919.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">除螨虫沐浴露止痒祛痘去螨虫 特价69 原价99</p>
+                  <p class="price">特价:￥69</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img14.360buyimg.com/seckillcms/s144x144_jfs/t1/166992/40/7867/64669/60345632Ece9492d8/45e174559c9abd60.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">莎贝龙发胶定型喷雾420ml 特价13.8 原价21.5</p>
+                  <p class="price">特价:￥13.8</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img11.360buyimg.com/seckillcms/s144x144_jfs/t1/157501/7/10083/49510/60248cb8Eed991afb/6beb4ad1a92ce418.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">joyous发际线粉防水密发盖白发 特价29 原价49</p>
+                  <p class="price">特价:￥29</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img20.360buyimg.com/seckillcms/s144x144_jfs/t1/167736/39/4407/198907/601f8f9cE241708bc/7df942990d5d870c.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">30天试用】娜姐推荐艾脐贴 特价33.6 原价48</p>
+                  <p class="price">特价:￥33.6</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img10.360buyimg.com/seckillcms/s144x144_jfs/t1/120887/15/12587/126688/5f601c4cE44819778/163e11876e98a10f.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">舒蕾洗发水绿茶籽600ml一瓶 特价24.9 原价39.9</p>
+                  <p class="price">特价:￥24.9</p>
+                </li>
+              </ul>
+              <ul class="BannerBottomRightControlItemUl ">
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img20.360buyimg.com/seckillcms/s144x144_jfs/t1/167736/39/4407/198907/601f8f9cE241708bc/7df942990d5d870c.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">30天试用】娜姐推荐艾脐贴 特价33.6 原价48</p>
+                  <p class="price">特价:￥33.6</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img20.360buyimg.com/seckillcms/s144x144_jfs/t1/161801/36/4982/73829/6014da66E87c16560/79a15f0a1978c3f3.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">鱼缸水泵静音三合一循环潜水泵 特价31 原价38</p>
+                  <p class="price">特价:￥31</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img13.360buyimg.com/seckillcms/s144x144_jfs/t1/150580/15/18294/192486/6020c0efE8e4c9332/98dc448b84f1e7f4.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">汉轩 自来水管软管家用软水管 特价13.3 原价19</p>
+                  <p class="price">特价:￥13.3</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img13.360buyimg.com/seckillcms/s144x144_jfs/t1/157910/32/7487/125104/602e70baEbf6ea797/1a6476ae7f36b43a.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">小猪佩奇爬楼梯玩具 特价62.9 原价99.9</p>
+                  <p class="price">特价:￥62.9</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img10.360buyimg.com/seckillcms/s144x144_jfs/t1/20433/38/1305/345321/5c10e654E6ede1ee7/d7ee48300bc6d824.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">罗盘仪多功能综合指南针 特价99 原价165</p>
+                  <p class="price">特价:￥99</p>
+                </li>
+              </ul>
+              <ul class="BannerBottomRightControlItemUl ">
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img13.360buyimg.com/seckillcms/s144x144_jfs/t1/171436/34/2130/94612/5ffaf1b6E6165b278/15948d0afd7faf6d.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">顺丰 智利车厘子 JJ-3斤礼盒</p>
+                  <p class="price">特价:￥163</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img30.360buyimg.com/seckillcms/s144x144_jfs/t1/159885/11/5006/204400/600fe9b9Eedc1e623/d77e4940cf03efdd.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">【3份99】黑虎虾600g 特价68 原价178</p>
+                  <p class="price">特价:￥68</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img20.360buyimg.com/seckillcms/s144x144_jfs/t1/157656/21/7649/163347/602de5f7Eeae9ebfb/836bab2ab5569b3f.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">现摘现发 淡雪白草莓混色装2斤 特价218 原价288</p>
+                  <p class="price">特价:￥218</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img12.360buyimg.com/seckillcms/s144x144_jfs/t1/150065/19/8327/267044/5f60dbfdEecdc9c58/11034351f4a303a6.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">顺丰-洪湖新鲜莲藕 特价39 原价43.9</p>
+                  <p class="price">特价:￥39</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img12.360buyimg.com/seckillcms/s144x144_jfs/t1/156860/26/7918/166781/601277cdEb27a2a57/9b2d5b235e30bdb3.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">金枕头无核冷冻榴莲肉 250g 特价52.9 原价128</p>
+                  <p class="price">特价:￥25.9</p>
+                </li>
+              </ul>
+              <ul class="BannerBottomRightControlItemUl  ItemUlShowBox">
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img30.360buyimg.com/seckillcms/s144x144_jfs/t1/159228/17/6148/120988/601a1fefE45ba5556/f4ec20389546f6ad.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">四叉液体眉笔防水防汗#深棕色</p>
+                  <p class="price">特价:￥27.3</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img30.360buyimg.com/seckillcms/s144x144_jfs/t1/150623/34/20165/196980/602dbe75E0bc7ebee/8e4e9ff22d3cdf70.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">小绵羊全棉单件被套</p>
+                  <p class="price">特价:￥69</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img10.360buyimg.com/seckillcms/s144x144_jfs/t1/156938/40/10056/30522/602b8f88E7f7c2ee4/cef60211a2746b25.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">手机屏幕清洁剂灰色-喷擦一体</p>
+                  <p class="price">特价:￥11</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img11.360buyimg.com/seckillcms/s144x144_jfs/t1/159623/13/3826/141417/6004de4aE2d5214aa/7dd1ca7d11b393ea.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">贵州金沙回沙梁酱香型白酒</p>
+                  <p class="price">特价:￥99</p>
+                </li>
+                <li class="BannerBottomRightControlBigItem">
+                  <img
+                    src="//img30.360buyimg.com/seckillcms/s144x144_jfs/t1/153174/5/18603/29368/602e85a5Eabc3f991/d0c78ec8195c1c9a.jpg!q70.jpg.webp"
+                    alt="">
+                  <p class="text">奥克斯家用单门可爱小型冰箱</p>
+                  <p class="price">特价:￥389</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Banner中下选项卡，每日特价 finish -->
+
+          <!-- Banner中下右侧小内容选项卡切换 start -->
+        </div>
+      </div>
+      <!-- Banner 中间轮播图 finish -->
+
+      <!-- Banner 部分左边样式 -->
+      <div class="BannerRight">
+        <div class="BannerRightWrap">
+          <!-- Banner登录模块 start -->
+          <div class="BannerLogin">
+            <div class="BannerLoginWrap">
+              <img src="../images/BannerLoginLogAfter.png" alt="">
+              <i>Hellow~ 欢迎来到考拉海购！</i>
+              <p><a href="../views/login.html">登录</a><span>|</span><a href="../views/registration.html">免费注册</a></p>
+            </div>
+            <div class="BannerLoginWrap BannerLoginWrap1">
+              <img src="../images/BannerLoginLogAfter.png" alt="">
+              <i>欢迎~ 2834007710@qq.c10</i>
+              <p>登录成功! <a href=""> 退出登录</a></p>
+            </div>
+          </div>
+          <!-- Banner登录模块 finish -->
+
+          <!-- 考拉快报模块 start -->
+          <div class="consulting">
+            <div class="consultingWrap">
+              <p>
+              <h2>考拉快报 </h2><span>更多 >></span>
+              </p>
+            </div>
+            <ul class="consultingTitle">
+              <li class="consultingText"><span>热议</span><a href="#">完美日记小酒馆唇釉，醉倒在你的温柔乡</a></li>
+              <li class="consultingText"><span>热议</span><a href="#">狂销22万的超便宜机械键盘，到底有多好用？</a></li>
+              <li class="consultingText"><span>热门</span><a href="#">男生四季常备的运动鞋穿搭，演绎阳光男神范！</a></li>
+              <li class="consultingText"><span>HOT</span><a href="#">电竞笔记本和外设不知道怎么选？这篇文章告诉你！</a></li>
+            </ul>
+          </div>
+          <!-- 考拉快报模块 finish -->
+
+          <!-- 新品首发模块 start -->
+          <div class="newItemsShow">
+            <div class="newItemsShowWrap">
+              <!-- 新品首发轮播图 start -->
+              <div class="BannernewItemsShowLunbo">
+                <!-- 轮播显示盒子 -->
+                <div class="BannernewItemsLunboWrap">
+                  <!-- 内容盒子 -->
+                  <div class="BannernewItemsLunboImgWrap">
+                    <div class="BannernewItemsLunboImgShow">
+                      <div class="BannernewItemsLunboimg">
+                        <h3>新品首发</h3>
+                        <i class="iconfont iconarrow- BannernewItemsLunboLast"></i>
+                        <ul id="BannernewItemsLunboUl">
+                          <li class="BannernewItemsLunImgBoxLeft"><img
+                              src="//img12.360buyimg.com/babel/s120x120_jfs/t1/154113/6/19427/231607/6035b4a1E6acf82d7/ec1f43cf06b84825.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                          <li class="BannernewItemsLunImgBoxCenter"><img
+                              src="//img12.360buyimg.com/babel/s120x120_jfs/t1/103050/33/16052/144025/5e782b01Ea47104b2/400cccecfc3f3dc0.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                          <li class="BannernewItemsLunImgBoxRight"><img
+                              src="//img10.360buyimg.com/babel/s120x120_jfs/t1/156752/21/10778/86483/603472cfE6797d661/afaacfec84ad36cc.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                          <li class="BannernewItemsLunImgBox1"><img
+                              src="//img13.360buyimg.com/babel/s120x120_jfs/t1/72823/30/1531/48002/5cfdefffEf3ec7cfa/35bf04574fb2cd2b.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                          <li class="BannernewItemsLunImgBox2"><img
+                              src="//img12.360buyimg.com/babel/s120x120_jfs/t1/154113/6/19427/231607/6035b4a1E6acf82d7/ec1f43cf06b84825.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                          <li class="BannernewItemsLunImgBoxCenter"><img
+                              src="//img12.360buyimg.com/babel/s120x120_jfs/t1/103050/33/16052/144025/5e782b01Ea47104b2/400cccecfc3f3dc0.jpg!cc_120x120.webp"
+                              alt="">
+                            <div></div>
+                          </li>
+                        </ul>
+                        <i class="iconfont iconfx6-right BannernewItemsLunboNext"></i>
+                      </div>
+                    </div>
+                    <div class="BannernewItemsLunboListList">
+                      <span class="BannernewItemsLunboListBtn"></span>
+                      <span class="BannernewItemsLunboListBtn" style="background: #7FFFD4;"></span>
+                      <span class="BannernewItemsLunboListBtn"></span>
+                      <span class="BannernewItemsLunboListBtn"></span>
+                      <span class="BannernewItemsLunboListBtn"></span>
+                      <span class="BannernewItemsLunboListBtn"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 新品首发轮播图 finish -->
+            </div>
+          </div>
+          <!-- 新品首发模块 finish -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- header_finish 公共banner结束 -->
+<!-- banner_finish 公共banner结束 -->
 
 
 <!-- banner公共部分Js功能 -->
 <script>
+  // 请求BannerLeft火热商铺品牌数据
+  $.ajax({
+    type: "get",
+    url: "../json/BannerLeftHotDate.json",
+    data: "data",
+    dataType: "json",
+    success: function (response) {
+      // 渲染数据
+      var BannerLeftImgSrcStr1 = ''
+      var BannerLeftImgSrcStr2 = ''
+      var BannerLeftImgSrcStr3 = ''
+      $.each(response, function (index, value) {
+        if (index <= 4) {
+          BannerLeftImgSrcStr1 += `
+        <li class="BannerLeFtrecentlyHotSaleMerchant">
+        <img src="${value.imgSrc}" alt="">
+        <p>${value.text}</p>
+        </li>`
+        } else if (index > 4 && index <= 9) {
+          BannerLeftImgSrcStr2 += `
+        <li class="BannerLeFtrecentlyHotSaleMerchant">
+        <img src="${value.imgSrc}" alt="">
+        <p>${value.text}</p>
+        </li>`
+        } else if (index > 9 && index <= 14) {
+          BannerLeftImgSrcStr3 += `
+        <li class="BannerLeFtrecentlyHotSaleMerchant">
+        <img src="${value.imgSrc}" alt="">
+        <p>${value.text}</p>
+        </li>`
+        } else {
+          return false
+        }
+      })
+      // 渲染到不同的UL中
+      $('.BannerLeFtrecentlyHotSaleMerchantWrap1').html(BannerLeftImgSrcStr1)
+      $('.BannerLeFtrecentlyHotSaleMerchantWrap2').html(BannerLeftImgSrcStr2)
+      $('.BannerLeFtrecentlyHotSaleMerchantWrap3').html(BannerLeftImgSrcStr3)
+    }
+  })
+
+  var BannerLeftUlIndex = 0
+  var BannerLeftPointIndex = 0
+  // 自动轮播
+  BannerLeftautoPlay()
+
+  // 鼠标移入自动停止
+  $('.BannerLeFtrecentlyHotSaleMerchantShow').on('mouseenter', '.BannerLeFtrecentlyHotSaleMerchant', function () {
+    clearInterval(timer)
+    return false
+  })
+  $('.BannerLeFtrecentlyHotSaleMerchantShow').on('mouseleave', '.BannerLeFtrecentlyHotSaleMerchant', function () {
+    clearInterval(timer)
+    BannerLeftautoPlay()
+    return false
+  })
+
+  // 鼠标悬停清除定时器并判断圆点下标
+  $('.indicatePointLi').mouseenter(function () {
+    clearInterval(timer)
+    BannerLeftUlIndex = BannerLeftPointIndex = $(this).index()
+    changeBannerLeft()
+  })
+  $('.indicatePointLi').mouseleave(function () {
+    BannerLeftautoPlay()
+  })
+
+  function BannerLeftautoPlay() {
+    timer = setInterval(function () {
+      BannerLeftmoveNext();
+    }, 3000);
+  }
+  // 自动轮播下一张
+  function BannerLeftmoveNext() {
+    BannerLeftUlIndex++
+    BannerLeftPointIndex++
+    if (BannerLeftUlIndex >= $('.BannerLeFtrecentlyHotSaleMerchantWrap').length) {
+      BannerLeftUlIndex = 0
+    }
+    if (BannerLeftPointIndex >= $('.indicatePointLi').length) {
+      BannerLeftPointIndex = 0
+    }
+    changeBannerLeft()
+  }
+
+  // 实现渐隐渐现展示轮播，且鼠标悬停小点就切换轮播内容
+  function changeBannerLeft() {
+    $('.indicatePointLi').removeClass('ShowPoint')
+    $($('.indicatePointLi')[BannerLeftPointIndex]).addClass('ShowPoint')
+    $('.BannerLeFtrecentlyHotSaleMerchantWrap').removeClass('ShowHotSaleMerchantBox')
+    $($('.BannerLeFtrecentlyHotSaleMerchantWrap')[BannerLeftPointIndex]).addClass('ShowHotSaleMerchantBox')
+  }
+
+  // 实现中间层级轮播图功能
+  let classes = ['BannerBigMidLunImgBoxLeft', 'BannerBigMidLunImgBoxCenter', 'BannerBigMidLunImgBoxRight', 'BannerBigMidLunImgBox1', 'BannerBigMidLunImgBox2', 'BannerBigMidLunImgBox3'];
+  let timer1 = setInterval(function () {
+    BannerBigMidLunbefore();
+  }, 3700);
+
+  function BannerBigMidLunbefore() {
+    for (let i = 0; i < classes.length; i++) {
+      $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+    }
+    let last = classes.pop();
+    classes.unshift(last);
+    for (let i = 0; i < classes.length; i++) {
+      $('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class", classes[i]);
+    }
+    for (let i = 0; i < classes.length; i++) {
+      if ($('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class") == 'BannerBigMidLunImgBoxCenter') {
+        $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "red");
+      }
+    }
+  }
+
+  function BannerBigMidLunafter() {
+    for (let i = 0; i < classes.length; i++) {
+      $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+    }
+    let first = classes.shift();
+    classes.push(first);
+    for (let i = 0; i < classes.length; i++) {
+      $('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class", classes[i]);
+    }
+    for (let i = 0; i < classes.length; i++) {
+      if ($('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class") == 'BannerBigMidLunImgBoxCenter') {
+        $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "red");
+      }
+    }
+  }
+  for (let i = 0; i < classes.length; i++) {
+    (function (i) {
+      $('#BannerBigMidLunboUl>li:eq(' + i + ')').click(function () {
+        if ($('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class") == "BannerBigMidLunImgBoxLeft") {
+          BannerBigMidLunafter();
+        } else if ($('#BannerBigMidLunboUl>li:eq(' + i + ')').attr("class") == "BannerBigMidLunImgBoxRight") {
+          BannerBigMidLunbefore();
+        } else {
+          return false;
+        }
+      });
+      $('.BannerMidLunboListBtn:eq(' + i + ')').mouseover(function () {
+        $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "red");
+        clearInterval(timer1);
+        while (classes[i] != 'BannerBigMidLunImgBoxCenter') {
+          BannerBigMidLunbefore();
+        }
+      });
+      $('.BannerMidLunboListBtn:eq(' + i + ')').mouseout(function () {
+        $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+        clearInterval(timer1);
+        timer1 = setInterval(function () {
+          BannerBigMidLunbefore();
+        }, 3700);
+      });
+    })(i);
+  }
+
+  $('.BannerBigMidLunboLast').click(function () {
+    clearInterval(timer1);
+    BannerBigMidLunbefore();
+    timer1 = setInterval(function () {
+      BannerBigMidLunbefore();
+    }, 3700);
+  });
+
+  $('.BannerBigMidLunboNext').click(function () {
+    clearInterval(timer1);
+    BannerBigMidLunafter();
+    timer1 = setInterval(function () {
+      BannerBigMidLunbefore();
+    }, 3700);
+  });
+
+  $('.BannerBigMidLunboImgWrap').mouseover(function () {
+    $('.BannerBigMidLunboLast,.BannerBigMidLunboNext').css("display", "block");
+    clearInterval(timer1);
+  });
+
+  $('.BannerBigMidLunboImgWrap').mouseout(function () {
+    $('.BannerBigMidLunboLast,.BannerBigMidLunboNext').css("display", "none");
+    clearInterval(timer1);
+    timer1 = setInterval(function () {
+      BannerBigMidLunbefore();
+    }, 3700);
+  });
+
+  // 实现Banner选项卡悬停功能
+  $('.BannerBottomRightControlWrap').on('hover', '.BannerBottomRightControlLi', function () {
+    var itemindex = $(this).index() - 1
+    $('.BannerBottomRightControlItemUl').removeClass('ItemUlShowBox')
+    $($('.BannerBottomRightControlItemUl')[itemindex]).addClass('ItemUlShowBox')
+    $('.BannerBottomRightControlLi').removeClass('ControlLiShowBox')
+    $($('.BannerBottomRightControlLi')[itemindex]).addClass('ControlLiShowBox')
+  })
+
+  // 实现新品首发轮播图
+  let classes1 = ['BannernewItemsLunImgBoxLeft', 'BannernewItemsLunImgBoxCenter', 'BannernewItemsLunImgBoxRight', 'BannernewItemsLunImgBox1', 'BannernewItemsLunImgBox2', 'BannernewItemsLunImgBox3'];
+  let timer2 = setInterval(function () {
+    BannernewItemsLunbefore();
+  }, 4200);
+
+  function BannernewItemsLunbefore() {
+    for (let i = 0; i < classes1.length; i++) {
+      $('.BannernewItemsLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+    }
+    let last = classes1.pop();
+    classes1.unshift(last);
+    for (let i = 0; i < classes1.length; i++) {
+      $('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class", classes1[i]);
+    }
+    for (let i = 0; i < classes1.length; i++) {
+      if ($('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class") == 'BannernewItemsLunImgBoxCenter') {
+        $('.BannernewItemsLunboListBtn:eq(' + i + ')').css("background", "#7FFFD4");
+      }
+    }
+  }
+
+  function BannernewItemsLunafter() {
+    for (let i = 0; i < classes1.length; i++) {
+      $('.BannernewItemsLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+    }
+    let first = classes1.shift();
+    classes1.push(first);
+    for (let i = 0; i < classes1.length; i++) {
+      $('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class", classes1[i]);
+    }
+    for (let i = 0; i < classes1.length; i++) {
+      if ($('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class") == 'BannernewItemsLunImgBoxCenter') {
+        $('.BannernewItemsLunboListBtn:eq(' + i + ')').css("background", "#7FFFD4");
+      }
+    }
+  }
+  for (let i = 0; i < classes1.length; i++) {
+    (function (i) {
+      $('#BannernewItemsLunboUl>li:eq(' + i + ')').click(function () {
+        if ($('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class") == "BannernewItemsLunImgBoxLeft") {
+          BannernewItemsLunafter();
+        } else if ($('#BannernewItemsLunboUl>li:eq(' + i + ')').attr("class") == "BannernewItemsLunImgBoxRight") {
+          BannernewItemsLunbefore();
+        } else {
+          return false;
+        }
+      });
+      $('.BannernewItemsLunboListBtn:eq(' + i + ')').mouseover(function () {
+        $('.BannernewItemsLunboListBtn:eq(' + i + ')').css("background", "#7FFFD4");
+        clearInterval(timer2);
+        while (classes1[i] != 'BannernewItemsLunImgBoxCenter') {
+          BannernewItemsLunbefore();
+        }
+      });
+      $('.BannernewItemsLunboListBtn:eq(' + i + ')').mouseout(function () {
+        $('.BannerMidLunboListBtn:eq(' + i + ')').css("background", "rgb(170,170,170,0.5)");
+        clearInterval(timer2);
+        timer2 = setInterval(function () {
+          BannernewItemsLunbefore();
+        }, 4200);
+      });
+    })(i);
+  }
+
+  $('.BannernewItemsLunboLast').click(function () {
+    clearInterval(timer2);
+    BannernewItemsLunbefore();
+    timer2 = setInterval(function () {
+      BannernewItemsLunbefore();
+    }, 4200);
+  });
+
+  $('.BannernewItemsLunboNext').click(function () {
+    clearInterval(timer2);
+    BannernewItemsLunafter();
+    timer2 = setInterval(function () {
+      BannernewItemsLunbefore();
+    }, 4200);
+  });
+
+  $('.BannernewItemsLunboImgWrap').mouseover(function () {
+    $('.BannernewItemsLunboLast,.BannernewItemsLunboNext').css("display", "block");
+    clearInterval(timer2);
+  });
+
+  $('.BannernewItemsLunboImgWrap').mouseout(function () {
+    $('.BannernewItemsLunboLast,.BannernewItemsLunboNext').css("display", "none");
+    clearInterval(timer2);
+    timer2 = setInterval(function () {
+      BannernewItemsLunbefore();
+    }, 4200);
+  });
 
 </script>
