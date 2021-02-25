@@ -11,7 +11,7 @@ $('.mask').on('click', '.add', function () {
 })
 
 //点击请求数据获取json数据并渲染
-$('.btn').click(function () {
+// $('.btn').click(function () {
   $(function () { // 页面加载之后调用
     $.ajax({
       //请求数据地址
@@ -43,7 +43,7 @@ $('.btn').click(function () {
       }
     });
   });
-})
+// })
 
 // 先判断当前用户信息（不同用户功能还未实现）
 //先将localStorage商品数据清空
