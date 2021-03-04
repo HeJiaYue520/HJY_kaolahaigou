@@ -851,6 +851,8 @@
     float: left;
   }
 
+
+  /* 溢出隐藏文字 */
   .soppingSecItemDetail {
     width: 140px;
     height: 50px;
@@ -2748,7 +2750,7 @@
     }
 
     // 导航栏购物车打开数据渲染效果
-    var isExistGoodsFlog = 0
+    var isExistGoodsFlog = 1
     $('.shoppingCarNavWrap').on('click', function () {
       // 清除所有shoppingCarSecNavWrap的showBox类名
       if (localStorage.getItem('ShowUser') === null) {
